@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>منظومة التربية و التكوين - منصة تربويات المغرب</title>
+    <meta name="description" content="استعراض الإصلاحات التربوية في المغرب: الميثاق الوطني، الكتاب الأبيض، المخطط الاستعجالي، والرؤية الاستراتيجية.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --main-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            --hover-gradient: linear-gradient(135deg, #1e40af 0%, #5b21b6 100%);
+            --container-bg: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 700px;
+            padding: 40px;
+            background: var(--container-bg);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.6s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--main-gradient);
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            background: var(--hover-gradient);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+        }
+
+        .card a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: block;
+            width: 100%;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px 15px;
+            }
+            .card a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <a href="chrono-islah.html">الإصلاحات التي عرفها المغرب منذ 1956م</a>
+        </div>
+        
+        <div class="card">
+            <a href="Almitaq.html">الميثاق الوطني للتربية والتكوين</a>
+        </div>
+        
+        <div class="card">
+            <a href="livre-blanc.html">الكتاب الأبيض</a>
+        </div>
+        
+        <div class="card">
+            <a href="barnamaj-istijali.html">المخطط الاستعجالي</a>
+        </div>
+        
+        <div class="card">
+            <a href="roya-istratigiya.html">الرؤية الإستراتيجية 2015-2030</a>
+        </div>
+    </div>
+
+</body>
+</html>
