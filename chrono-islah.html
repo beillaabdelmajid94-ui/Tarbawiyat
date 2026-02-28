@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مخطط إصلاحات التعليم بالمغرب</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+        * {
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .reform-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .reform-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .reform-card:active {
+            transform: scale(0.98);
+        }
+        
+        .year-badge {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .reform-card.show-year .year-badge {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .pulse-hint {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .gradient-title {
+            background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+        }
+        
+        .sidebar-gradient-1 {
+            background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        
+        .sidebar-gradient-2 {
+            background: linear-gradient(180deg, #60a5fa 0%, #3b82f6 100%);
+        }
+        
+        .sidebar-gradient-3 {
+            background: linear-gradient(180deg, #a78bfa 0%, #8b5cf6 100%);
+        }
+        
+        .sidebar-gradient-4 {
+            background: linear-gradient(180deg, #f472b6 0%, #ec4899 100%);
+        }
+    </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-gradient-to-br from-slate-100 via-slate-50 to-emerald-50">
+  <div class="h-full overflow-auto p-4 md:p-6 lg:p-8">
+   <div class="max-w-7xl mx-auto"><!-- العنوان الرئيسي -->
+    <div id="main-title" class="gradient-title text-white text-center py-6 px-4 rounded-2xl shadow-xl mb-6 border-4 border-emerald-700">
+     <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-2">مخطط إصلاحات التعليم بالمغرب</h1>
+     <p class="text-emerald-100 text-sm md:text-base">من الاستقلال إلى اليوم</p>
+    </div><!-- إرشادات -->
+    <div class="text-center mb-6 pulse-hint"><span class="inline-flex items-center gap-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-md text-gray-600">
+      <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+      </svg> اضغط على أي إصلاح لإظهار السنة </span>
+    </div><!-- المحتوى الرئيسي -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6"><!-- الأعمدة الثلاثة للإصلاحات -->
+     <div class="lg:col-span-3"><!-- رؤوس الأعمدة -->
+      <div class="grid grid-cols-3 gap-3 mb-4">
+       <div class="bg-amber-400 text-center py-3 px-2 rounded-xl font-bold text-gray-800 shadow-md border-2 border-amber-500"><span class="text-sm md:text-base">1 مرحلة ما بعد الاستقلال</span>
+       </div>
+       <div class="bg-amber-400 text-center py-3 px-2 rounded-xl font-bold text-gray-800 shadow-md border-2 border-amber-500"><span class="text-sm md:text-base">2 مرحلة الثمانينيات والتسعينيات</span>
+       </div>
+       <div class="bg-amber-400 text-center py-3 px-2 rounded-xl font-bold text-gray-800 shadow-md border-2 border-amber-500"><span class="text-sm md:text-base">3 مرحلة الألفية الثالثة</span>
+       </div>
+      </div><!-- بطاقات الإصلاحات -->
+      <div class="grid grid-cols-3 gap-3"><!-- العمود الأول -->
+       <div class="space-y-3">
+        <div class="reform-card bg-blue-100 rounded-xl shadow-md border-2 border-blue-200 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">اللجنة الملكية لإصلاح التعليم</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-blue-300 py-2 text-center font-bold text-blue-700">
+          1957
+         </div>
+        </div>
+        <div class="reform-card bg-amber-100 rounded-xl shadow-md border-2 border-amber-200 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">المخطط الخماسي الأول</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-amber-300 py-2 text-center font-bold text-amber-700">
+          1960
+         </div>
+        </div>
+        <div class="reform-card bg-gray-200 rounded-xl shadow-md border-2 border-gray-300 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">مناظرة المعمورة</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-gray-400 py-2 text-center font-bold text-gray-700">
+          1964
+         </div>
+        </div>
+        <div class="reform-card bg-rose-100 rounded-xl shadow-md border-2 border-rose-200 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">مناظرة إفران الأولى</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-rose-300 py-2 text-center font-bold text-rose-700">
+          1970
+         </div>
+        </div>
+        <div class="reform-card bg-slate-200 rounded-xl shadow-md border-2 border-slate-300 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">مناظرة إفران الثانية</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-slate-400 py-2 text-center font-bold text-slate-700">
+          1980
+         </div>
+        </div>
+       </div><!-- العمود الثاني -->
+       <div class="space-y-3">
+        <div class="reform-card bg-cyan-400 rounded-xl shadow-md border-2 border-cyan-500 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-white text-sm md:text-base">اللجنة الوطنية للتعليم</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-cyan-500 py-2 text-center font-bold text-cyan-700">
+          1994
+         </div>
+        </div>
+        <div class="reform-card bg-fuchsia-500 rounded-xl shadow-md border-2 border-fuchsia-600 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-white text-sm md:text-base">اللجنة الخاصة بالتربية والتكوين (COSEF)</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-fuchsia-500 py-2 text-center font-bold text-fuchsia-700">
+          1999
+         </div>
+        </div>
+        <div class="reform-card bg-emerald-300 rounded-xl shadow-md border-2 border-emerald-400 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">الميثاق الوطني للتربية والتكوين</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-emerald-400 py-2 text-center font-bold text-emerald-700">
+          1999
+         </div>
+        </div>
+       </div><!-- العمود الثالث -->
+       <div class="space-y-3">
+        <div class="reform-card bg-blue-100 rounded-xl shadow-md border-2 border-blue-200 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">المخطط الاستعجالي</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-blue-300 py-2 text-center font-bold text-blue-700">
+          2009-2012
+         </div>
+        </div>
+        <div class="reform-card bg-amber-100 rounded-xl shadow-md border-2 border-amber-200 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">الرؤية الاستراتيجية 2015-2030</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-amber-300 py-2 text-center font-bold text-amber-700">
+          2015
+         </div>
+        </div>
+        <div class="reform-card bg-gray-200 rounded-xl shadow-md border-2 border-gray-300 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">القانون الإطار 51.17</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-gray-400 py-2 text-center font-bold text-gray-700">
+          2019
+         </div>
+        </div>
+        <div class="reform-card bg-rose-100 rounded-xl shadow-md border-2 border-rose-200 overflow-hidden" onclick="toggleYear(this)">
+         <div class="p-4 text-center"><span class="font-bold text-gray-800 text-sm md:text-base">خارطة الطريق 2022-2026</span>
+         </div>
+         <div class="year-badge bg-white border-t-2 border-rose-300 py-2 text-center font-bold text-rose-700">
+          2022
+         </div>
+        </div>
+       </div>
+      </div>
+     </div><!-- الشريط الجانبي -->
+ 
+
+      </div>
+     </div>
+    </div><!-- زر إظهار/إخفاء كل السنوات -->
+    <div class="text-center mt-6"><button onclick="toggleAllYears()" class="bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-700 hover:to-emerald-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"> <span class="flex items-center gap-2">
+       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+       </svg> إظهار/إخفاء كل السنوات </span> </button>
+    </div><!-- Footer -->
+    <div class="text-center mt-6 text-gray-500 text-sm">
+     <p>مخطط تفاعلي لتاريخ إصلاحات التعليم بالمملكة المغربية</p>
+    </div>
+   </div>
+  </div>
+  <script>
+        const defaultConfig = {
+            main_title: 'مخطط إصلاحات التعليم بالمغرب',
+            primary_color: '#059669',
+            secondary_color: '#fbbf24',
+            text_color: '#1f2937',
+            background_color: '#f8fafc',
+            accent_color: '#10b981'
+        };
+        
+        let allYearsVisible = false;
+        
+        function toggleYear(card) {
+            card.classList.toggle('show-year');
+        }
+        
+        function toggleAllYears() {
+            const cards = document.querySelectorAll('.reform-card');
+            allYearsVisible = !allYearsVisible;
+            cards.forEach(card => {
+                if (allYearsVisible) {
+                    card.classList.add('show-year');
+                } else {
+                    card.classList.remove('show-year');
+                }
+            });
+        }
+        
+        async function onConfigChange(config) {
+            const titleEl = document.getElementById('main-title');
+            if (titleEl) {
+                const h1 = titleEl.querySelector('h1');
+                if (h1) {
+                    h1.textContent = config.main_title || defaultConfig.main_title;
+                }
+            }
+            
+            document.body.style.setProperty('--primary', config.primary_color || defaultConfig.primary_color);
+        }
+        
+        function mapToCapabilities(config) {
+            return {
+                recolorables: [
+                    {
+                        get: () => config.background_color || defaultConfig.background_color,
+                        set: (value) => {
+                            config.background_color = value;
+                            window.elementSdk.setConfig({ background_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.primary_color || defaultConfig.primary_color,
+                        set: (value) => {
+                            config.primary_color = value;
+                            window.elementSdk.setConfig({ primary_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.text_color || defaultConfig.text_color,
+                        set: (value) => {
+                            config.text_color = value;
+                            window.elementSdk.setConfig({ text_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.secondary_color || defaultConfig.secondary_color,
+                        set: (value) => {
+                            config.secondary_color = value;
+                            window.elementSdk.setConfig({ secondary_color: value });
+                        }
+                    },
+                    {
+                        get: () => config.accent_color || defaultConfig.accent_color,
+                        set: (value) => {
+                            config.accent_color = value;
+                            window.elementSdk.setConfig({ accent_color: value });
+                        }
+                    }
+                ],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+        
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ['main_title', config.main_title || defaultConfig.main_title]
+            ]);
+        }
+        
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d4bba7ba248a5f5',t:'MTc3MjIzNzczNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
