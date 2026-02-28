@@ -1,262 +1,108 @@
 <!doctype html>
-
 <html lang="ar" dir="rtl">
- <head>
-  <meta charset="UTF-8">
-	 <title>منظومة التربية و التكوين  - منصة تربويات المغرب</title>
-<meta name="description" content="منصة تربويات الشاملة لعلوم التربية، الديداكتيك، ومستجدات نظام التربية والتكوين في المغرب. استعرض الإصلاحات التربوية والميثاق الوطني والرؤية الاستراتيجية.">
-<meta name="keywords" content="علوم التربية, الديداكتيك, الميثاق الوطني, الكتاب الأبيض, الرؤية الاستراتيجية, التعليم في المغرب">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مخطط علوم التربية</title>
-  <style>
+<head>
+    <meta charset="UTF-8">
+    <title>منظومة التربية و التكوين - منصة تربويات المغرب</title>
+    <meta name="description" content="منصة تربويات الشاملة لعلوم التربية، الديداكتيك، ومستجدات نظام التربية والتكوين في المغرب.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
         :root {
-            --primary-blue: #2563eb;
-            --secondary-purple: #7c3aed;
-            --dark-accent: #1e1b4b;
-            --light-gray: #e5e7eb;
-            --dark-text: #1f2937;
-            --light-text: #ffffff;
+            --primary-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            --hover-gradient: linear-gradient(135deg, #1d4ed8 0%, #6d28d9 100%);
+            --bg-dark: #111827;
+            --card-bg: #1f2937;
+            --text-light: #ffffff;
         }
 
         * {
             box-sizing: border-box;
-        }
-
-        html, body {
-            height: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            background: #f3f4f6;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100%;
-            margin: 0;
+            min-height: 100vh;
             padding: 20px;
         }
 
         .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1.5fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
             padding: 40px;
-            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            animation: slideIn 0.6s ease-out;
+            background: var(--bg-dark);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-out;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        /* العناوين العلوية */
-        .header-item {
-            padding: 18px 15px;
+        .section-card {
+            background: var(--primary-gradient);
+            color: var(--text-light);
+            padding: 30px 20px;
             text-align: center;
+            border-radius: 15px;
             font-weight: 600;
-            font-size: 1.05rem;
-            border-radius: 10px;
-            color: var(--light-text);
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .header-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
-        }
-
-        .yellow-bg {
-            background: linear-gradient(135deg, var(--dark-accent) 0%, #0f172a 100%) !important;
-            box-shadow: 0 4px 12px rgba(30, 27, 75, 0.4) !important;
-        }
-
-        /* العمود الجانبي الأيسر */
-        .left-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            grid-row: 2 / 7;
-            justify-content: space-around;
-            border-right: 3px solid var(--primary-blue);
-            padding-left: 15px;
-        }
-
-        /* العناصر في الوسط */
-        .main-content {
-            grid-column: 2 / 4;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .black-card {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-            color: white;
-            padding: 16px 18px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1rem;
-            font-weight: 500;
-            position: relative;
-            box-shadow: 0 4px 12px rgba(30, 27, 75, 0.3);
-            transition: all 0.3s ease;
-            line-height: 1.4;
-        }
-
-        .black-card:hover {
-            transform: translateX(-5px);
-            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
-        }
-
-        .black-card::before {
-            content: "";
-            position: absolute;
-            right: -30px;
-            top: 50%;
-            width: 30px;
-            height: 2px;
-            background: linear-gradient(to right, var(--primary-blue), transparent);
-            transform: translateY(-50%);
-        }
-
-        /* العمود الأيمن */
-        .right-column {
-            display: grid;
-            grid-template-rows: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .white-box {
+            font-size: 1.1rem;
+            text-decoration: none;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #2d2d44 0%, #1f1f35 100%);
-            border: 2px solid var(--primary-blue);
-            border-radius: 10px;
-            font-weight: 500;
-            color: var(--light-text);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+            cursor: pointer;
+            min-height: 100px;
         }
 
-        .white-box:hover {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+        .section-card:hover {
+            transform: translateY(-5px);
+            background: var(--hover-gradient);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
         }
 
-        .white-box.yellow-bg {
-            background: linear-gradient(135deg, var(--dark-accent) 0%, #1e1b4b 100%) !important;
-            border-color: var(--secondary-purple);
-            color: white;
-            font-weight: 600;
-            box-shadow: 0 2px 8px rgba(30, 27, 75, 0.3) !important;
+        /* جعل العنصر الأخير يمتد في العرض إذا كان العدد فردياً في بعض المقاسات */
+        .section-card:last-child {
+            /* اختياري: لتمييز مستجدات نظام التربية */
         }
 
-        .white-box.yellow-bg:hover {
-            background: linear-gradient(135deg, var(--secondary-purple) 0%, #6d28d9 100%) !important;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(124, 58, 237, 0.35) !important;
-        }
-
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .container {
+                padding: 20px;
                 grid-template-columns: 1fr;
-                gap: 15px;
-                padding: 25px;
             }
-            
-            .header-item {
-                font-size: 0.95rem;
-                padding: 15px;
-            }
-            
-            .left-column, .black-card::before {
-                display: none;
-            }
-            
-            .main-content {
-                grid-column: unset;
-            }
-            
-            .right-column {
-                grid-template-rows: auto;
+            .section-card {
+                padding: 20px;
+                font-size: 1rem;
             }
         }
     </style>
-  <style>body { box-sizing: border-box; }</style>
-  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
- </head>
- <body>
-  <div class="container">
-   <div class="header-item">
-    التحولات البيداغوجية
-   </div>
-   <div class="header-item">
-    الديداكتيك
-   </div>
-   <div class="header-item yellow-bg">
-    علوم التربية
-   </div>
-   <div class="header-item">
-    مفاهيم تربوية
-   </div>
-   <div class="left-column"></div>
-   <div class="main-content">
-    <div class="black-card">
-      <a href="chrono-islah.html">الإصلاحات التي عرفها المغرب منذ 1956م</a>
-	
-    </div>
-    <div class="black-card">
-     <a href="Almitaq.html">الميثاق الوطني للتربية والتكوين</a>
-    </div>
-    <div class="black-card">
-     <a href="livre-blanc.html">الكتاب الأبيض</a>
-    </div>
-    <div class="black-card">
-     <a href="barnamaj-istijali.html">المخطط الاستعجالي</a>
-    </div>
-    <div class="black-card">
-     <a href="roya-istratigiya.html">الرؤية الإستراتيجية 2015-2030</a>
-    </div>
-   </div>
-   <div class="right-column">
-    <div class="white-box">
-     سوسيولوجيا التربية
-    </div>
-    <div class="white-box">
-     علم النفس التربوي
-    </div>
-    <div class="white-box yellow-bg">
-     مستجدات نظام التربية والتكوين
-    </div>
-   </div>
-  </div>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d4ba83d50ea6935',t:'MTc3MjIzNjk4OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</head>
+<body>
 
+    <div class="container">
+        <a href="#" class="section-card">التحولات البيداغوجية</a>
+        <a href="#" class="section-card">الديداكتيك</a>
+        <a href="#" class="section-card">علوم التربية</a>
+        <a href="#" class="section-card">مفاهيم تربوية</a>
+        <a href="#" class="section-card">سوسيولوجيا التربية</a>
+        <a href="#" class="section-card">علم النفس التربوي</a>
+        <a href="#" class="section-card">مستجدات نظام التربية والتكوين</a>
+    </div>
+
+</body>
 </html>
-
 
 
 
