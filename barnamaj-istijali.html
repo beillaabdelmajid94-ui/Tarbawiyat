@@ -125,6 +125,7 @@
         <button class="action-btn" onclick="toggleMain('shiar')">شعاره</button>
         <button class="action-btn" onclick="toggleMain('tarif')">تعريفه</button>
         <button class="action-btn" onclick="toggleMain('structureSection')">مما يتكون؟</button>
+		<button class="action-btn" onclick="toggleMain('ikhtisar')">اهم الاختصارات</button>
     </div>
 
     <div id="shiar" class="info-card">
@@ -135,6 +136,7 @@
     <div id="tarif" class="info-card">
         خطة إنقاذ للنسق التربوي المغربي بدأت من 2009 إلى 2012، تهدف إلى تسريع وتيرة إصلاح الميثاق الوطني.
     </div>
+
 
     <div id="structureSection">
         <div class="structure-summary">
@@ -215,34 +217,228 @@
                     </div>
                 </div>
             </div>
+			
+
+        </div>
+		
+		
+    </div>
+	
+	<div id="ikhtisar" class="info-card">
+        <h3 style="text-align: center; border-bottom: 2px solid #28a745; padding-bottom: 10px;">دليل الاختصارات والمصطلحات الشامل</h3>
+        
+        <div class="tabs-container">
+            
+            <div class="tab-item" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+                <div class="tab-header" onclick="toggleTab('tab1')" style="background: #f8fafc; padding: 12px; cursor: pointer; font-weight: bold; color: #2563eb; display: flex; justify-content: space-between;">
+                    1. أنظمة التدبير الإداري والمعلوماتي (Management Systems) <span>▼</span>
+                </div>
+                <div id="tab1" class="tab-content" style="display: none; padding: 15px; background: #fff;">
+                    <table class="shortcut-table" style="width: 100%; border-collapse: collapse; text-align: right;">
+                        <thead style="border-bottom: 2px solid #4a90e2;">
+                            <tr><th>الاختصار</th><th>العربية</th><th>الفرنسية</th><th>تعريف</th></tr>
+                        </thead>
+                        <tbody>
+						<tr>
+    <td style="font-weight: bold; color: #dc3545; border-bottom: 1px solid #eee; padding: 10px;">MASIRH</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;">تأهيل منظومة الإعلام لتدبير الموارد البشرية</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 10px;">Refonte du SI des RH</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;"><strong>تفعيل 2009:</strong> حل جذري لعصرنة تدبير المسارات المهنية رقمياً مع بداية البرنامج.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #dc3545; border-bottom: 1px solid #eee; padding: 10px;">SGP</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;">نظام تدبير الموارد البشرية</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 10px;">Système de Gestion du Personnel</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;"><strong>تفعيل 2009:</strong> استُخدم لضبط الحركات الانتقالية وتوزيع المدرسين على الأكاديميات.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #dc3545; border-bottom: 1px solid #eee; padding: 10px;">Scolarité-E</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;">بوابة التمدرس الإلكترونية</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 10px;">Portail de Scolarité Électronique</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;"><strong>تفعيل 2010:</strong> أداة لربط الإدارة والأساتذة بالأسر لتتبع غياب ونقاط التلاميذ.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #dc3545; border-bottom: 1px solid #eee; padding: 10px;">Ord-GIPE</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;">التدبير المندمج لموظفي التعليم</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 10px;">Gestion Intégrée du Personnel</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;"><strong>تحديث 2009:</strong> نظام تاريخي (منذ 1990) تم تطويره ليتماشى مع الميزانيات الجديدة.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #dc3545; border-bottom: 1px solid #eee; padding: 10px;">NET-GRH</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;">شبكة تدبير الموارد البشرية</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 10px;">Réseau de Gestion des RH</td>
+    <td style="border-bottom: 1px solid #eee; padding: 10px;"><strong>تفعيل 2010:</strong> منصة لمعالجة شكايات الموظفين إلكترونياً لتقريب الإدارة.</td>
+</tr>
+						
+						</tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-item" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+                <div class="tab-header" onclick="toggleTab('tab2')" style="background: #f8fafc; padding: 12px; cursor: pointer; font-weight: bold; color: #2563eb; display: flex; justify-content: space-between;">
+                    2. برامج التقويم والبحث والتطوير (Educational & Tech Programs) <span>▼</span>
+                </div>
+                <div id="tab2" class="tab-content" style="display: none; padding: 15px; background: #fff;">
+                    <table class="shortcut-table" style="width: 100%; border-collapse: collapse; text-align: right;">
+                        <thead style="border-bottom: 2px solid #4a90e2;">
+                            <tr><th>الاختصار</th><th>العربية</th><th>الفرنسية</th><th>تعريف</th></tr>
+                        </thead>
+                        <tbody>
+						<tr>
+    <td style="font-weight: bold; color: #28a745; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">GENIE</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">برنامج تعميم تكنولوجيا الإعلام والتواصل في التعليم</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Généralisation des TICE</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>تفعيل 2009-2011:</strong> البرنامج الوطني لتجهيز المؤسسات وتكوين الأساتذة تقنياً (تأسس 2006).</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #28a745; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">TIMSS</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">الدراسة الدولية لتوجهات التحصيل في الرياضيات والعلوم</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Trends in International Math and Science Study</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>مشاركات 2003-2011:</strong> اعتمد البرنامج الاستعجالي على دورة 2007 لتشخيص ضعف المستوى العلمي.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #28a745; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">PIRLS</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">الدراسة الدولية لقياس مدى تقدم القراءة في العالم</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Progress in International Reading Literacy Study</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>مشاركات 2006-2011:</strong> استُخدمت نتائجها لتطوير "بيداغوجيا الإدماج" ومشاريع القراءة بالابتدائي.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #28a745; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">SAGE</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">نظام تدبير الامتحانات</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Système de Gestion des Examens</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>تحديث 2009:</strong> تم تحويله لنظام ويب لتأمين وتدبير امتحانات البكالوريا بفعالية أكبر.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #28a745; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">ALEF</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">مشروع دعم التعلم الأساسي</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Appui à la Lecture et à l'Enseignement Fondamental</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>تفعيل 2009:</strong> مشروع تعاوني مع USAID ركز على تنمية الكفايات التربوية بالمناطق القروية.</td>
+</tr>
+						</tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-item" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+                <div class="tab-header" onclick="toggleTab('tab3')" style="background: #f8fafc; padding: 12px; cursor: pointer; font-weight: bold; color: #2563eb; display: flex; justify-content: space-between;">
+                    3. منظمات وشركاء دوليون (International Partners) <span>▼</span>
+                </div>
+                <div id="tab3" class="tab-content" style="display: none; padding: 15px; background: #fff;">
+                    <table class="shortcut-table" style="width: 100%; border-collapse: collapse; text-align: right;">
+                        <thead style="border-bottom: 2px solid #4a90e2;">
+                            <tr><th>الاختصار</th><th>العربية</th><th>الفرنسية</th><th>تعريف</th></tr>
+                        </thead>
+                        <tbody>
+						<tr>
+    <td style="font-weight: bold; color: #2563eb; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">ALECSO</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">المنظمة العربية للتربية والثقافة والعلوم</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Organisation Arabe pour l'Education</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>شراكة البرنامج:</strong> دعم مشاريع محو الأمية والتعليم غير النظامي (تأسست 1970).</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #2563eb; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">ISESCO</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">المنظمة الإسلامية للتربية والعلوم والثقافة</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Organisation Islamique pour l'Education</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>دعم وطني:</strong> ساهمت في دعم "الخطة الوطنية للتربية" المندمجة في المخطط (تأسست 1982).</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #2563eb; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">MEARN</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">الشبكة التعليمية للشرق الأوسط وشمال أفريقيا</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Middle East and North Africa Relief Network</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>تفعيل 2009:</strong> تعزيز العمل التشاركي والأساتذة المبدعين في إطار إدماج تكنولوجيا المعلومات.</td>
+</tr>
+						</tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-item" style="border: 1px solid #ddd; border-radius: 5px; margin-bottom: 10px;">
+                <div class="tab-header" onclick="toggleTab('tab4')" style="background: #f8fafc; padding: 12px; cursor: pointer; font-weight: bold; color: #2563eb; display: flex; justify-content: space-between;">
+                    4. مصطلحات تقنية ومنهجية (Technical Terms) <span>▼</span>
+                </div>
+                <div id="tab4" class="tab-content" style="display: none; padding: 15px; background: #fff;">
+                    <table class="shortcut-table" style="width: 100%; border-collapse: collapse; text-align: right;">
+                        <thead style="border-bottom: 2px solid #4a90e2;">
+                            <tr><th>الاختصار</th><th>العربية</th><th>الفرنسية</th><th>تعريف</th></tr>
+                        </thead>
+                        <tbody>
+						<tr>
+    <td style="font-weight: bold; color: #8b5cf6; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">CDMT</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">إطار النفقات متوسط المدى</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Cadre de Dépenses à Moyen Terme</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>تفعيل 2008/2009:</strong> آلية مالية لضمان تمويل مشاريع الإصلاح على مدى 3 سنوات متتالية.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #8b5cf6; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">GAR</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">التدبير المرتكز على النتائج</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Gestion Axée sur les Résultats</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>تفعيل 2009:</strong> المقاربة الرسمية لتدبير المشاريع لربط الميزانية بالأداء الفعلي.</td>
+</tr>
+<tr>
+    <td style="font-weight: bold; color: #8b5cf6; border-bottom: 1px solid #eee; padding: 12px; font-family: 'Courier New', monospace;">Web / Client-Server</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;">تقنيات الأنظمة البرمجية</td>
+    <td style="font-style: italic; color: #666; border-bottom: 1px solid #eee; padding: 12px;">Web Architecture / Client-Serveur</td>
+    <td style="border-bottom: 1px solid #eee; padding: 12px;"><strong>تحول 2009-2010:</strong> الانتقال من الأنظمة التقليدية المنعزلة إلى الأنظمة المفتوحة عبر الويب.</td>
+</tr>
+						</tbody>
+                    </table>
+                </div>
+            </div>
 
         </div>
     </div>
 
-    <script>
-        // وظيفة التنقل الكبرى
-        function toggleMain(id) {
-            const ids = ['shiar', 'tarif', 'structureSection'];
-            ids.forEach(sectionId => {
-                document.getElementById(sectionId).classList.remove('active');
-                document.getElementById(sectionId).classList.remove('active-flex');
-            });
-            const target = document.getElementById(id);
+   <script>
+    // وظيفة التنقل الكبرى
+    function toggleMain(id) {
+        // أضفنا 'ikhtisar' هنا في القائمة
+        const ids = ['shiar', 'tarif', 'structureSection', 'ikhtisar']; 
+        ids.forEach(sectionId => {
+            const el = document.getElementById(sectionId);
+            if(el) {
+                el.classList.remove('active');
+                el.classList.remove('active-flex');
+            }
+        });
+        
+        const target = document.getElementById(id);
+        if(target) {
             if(id === 'structureSection') target.classList.add('active-flex');
             else target.classList.add('active');
         }
+    }
 
-        // وظيفة الانبثاق الهرمي (للمجالات والمشاريع)
-        function toggleElement(id) {
-            const element = document.getElementById(id);
-            if (element.style.display === "block") {
-                element.style.display = "none";
-            } else {
-                element.style.display = "block";
-            }
+    // وظيفة جديدة لفتح التبويبات الأربعة (1، 2، 3، 4)
+    function toggleTab(tabId) {
+        const content = document.getElementById(tabId);
+        const allTabs = document.querySelectorAll('.tab-content');
+        
+        // إغلاق أي تبويب مفتوح آخر ليبقى الجدول منظماً
+        allTabs.forEach(tab => {
+            if(tab.id !== tabId) tab.style.display = "none";
+        });
+
+        // إظهار أو إخفاء الجدول المختار
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
         }
-    </script>
+    }
+
+    // وظيفة الانبثاق الهرمي (للمجالات والمشاريع السابقة)
+    function toggleElement(id) {
+        const element = document.getElementById(id);
+        if (element.style.display === "block") {
+            element.style.display = "none";
+        } else {
+            element.style.display = "block";
+        }
+    }
+</script>
 </body>
 </html>
+
 
 
