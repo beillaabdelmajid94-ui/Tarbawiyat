@@ -2,16 +2,21 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-
-    <title>منظومة التربية و التكوين - منصة تربويات المغرب</title>
+    <title>مستجدات الإصلاح - منصة تربويات المغرب</title>
     <meta name="description" content="استعراض الإصلاحات التربوية في المغرب: الميثاق الوطني، الكتاب الأبيض، المخطط الاستعجالي، والرؤية الاستراتيجية.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
-            --main-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            --hover-gradient: linear-gradient(135deg, #1e40af 0%, #5b21b6 100%);
-            --container-bg: linear-gradient(135deg, #1f2937 0%, #111827 100%);
-            --white: #ffffff;
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --dark: #0f172a;
+            --bg-light: #f1f5f9;
+            --text-main: #1e293b;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -21,141 +26,259 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f3f4f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-main);
+            padding-bottom: 50px;
         }
 
-        .container {
+        /* --- زر العودة الذكي --- */
+        .nav-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .back-btn {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* --- عنوان الصفحة --- */
+        .page-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--dark);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            margin-bottom: 40px;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to left, #fff, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- حاوية البطاقات --- */
+        .main-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .updates-list {
             display: flex;
             flex-direction: column;
             gap: 15px;
-            width: 100%;
-            max-width: 700px;
-            padding: 40px;
-            background: var(--container-bg);
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-            animation: slideIn 0.6s ease-out;
         }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(30px); }
+        .update-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            border-right: 5px solid var(--primary);
+            transition: var(--transition);
+            animation: slideUp 0.5s ease-out forwards;
+            opacity: 0;
+        }
+
+        .update-card:hover {
+            transform: translateX(-10px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            background: #f8fafc;
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .card-content i {
+            font-size: 1.4rem;
+            color: var(--secondary);
+        }
+
+        .card-content span {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .arrow-icon {
+            color: #cbd5e1;
+            transition: var(--transition);
+        }
+
+        .update-card:hover .arrow-icon {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        /* --- أنيميشن الظهور المتتالي --- */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .card {
-            background: var(--main-gradient);
-            padding: 22px;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: block;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-        }
+        /* تأخير بسيط لكل بطاقة ليعطي تأثير تتابع */
+        .update-card:nth-child(1) { animation-delay: 0.1s; }
+        .update-card:nth-child(2) { animation-delay: 0.2s; }
+        .update-card:nth-child(3) { animation-delay: 0.3s; }
+        .update-card:nth-child(4) { animation-delay: 0.4s; }
+        .update-card:nth-child(5) { animation-delay: 0.5s; }
+        .update-card:nth-child(6) { animation-delay: 0.6s; }
+        .update-card:nth-child(7) { animation-delay: 0.7s; }
+        .update-card:nth-child(8) { animation-delay: 0.8s; }
+        .update-card:nth-child(9) { animation-delay: 0.9s; }
+        .update-card:nth-child(10) { animation-delay: 1s; }
 
-        .card:hover {
-            transform: scale(1.03);
-            background: var(--hover-gradient);
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
-        }
-
-        .card a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            display: block;
-            width: 100%;
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 25px 15px;
-            }
-            .card a {
-                font-size: 1rem;
-            }
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.8rem; }
+            .update-card { padding: 15px; }
+            .card-content span { font-size: 0.95rem; }
         }
     </style>
 </head>
 <body>
-<div style="
-    width: 100%; 
-    padding: 20px; 
-    display: flex; 
-    justify-content: flex-start; /* يجعله جهة اليمين ليناسب اللغة العربية */
-    background: transparent; 
-    position: absolute; 
-    top: 0; 
-    right: 0;
-">
-    <a href="index.html" style="
-        text-decoration: none;
-        background-color: white;
-        color: #1e293b;
-        border: 1px solid #e2e8f0;
-        padding: 10px 20px;
-        border-radius: 12px;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    ">
-        🏠 العودة للرئيسية
-    </a>
-</div>
 
-<div style="height: 80px;"></div>
+    <nav class="nav-header">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-home"></i>
+            العودة للرئيسية
+        </a>
+    </nav>
 
-    <div class="container">
-        <div class="card">
-            <a href="chrono-islah.html">الإصلاحات التي عرفها المغرب منذ 1956م</a>
+    <header class="page-header">
+        <h1>مستجدات التربية والتكوين</h1>
+        <p>الكرونولوجيا الكاملة لإصلاح منظومة التعليم بالمغرب</p>
+    </header>
+
+    <main class="main-container">
+        <div class="updates-list">
+            
+            <a href="chrono-islah.html" class="update-card">
+                <div class="card-content">
+                    <i class="fas fa-history"></i>
+                    <span>الإصلاحات التي عرفها المغرب منذ 1956م</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="Almitaq.html" class="update-card" style="border-right-color: #059669;">
+                <div class="card-content">
+                    <i class="fas fa-file-signature"></i>
+                    <span>الميثاق الوطني للتربية والتكوين</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="livre-blanc.html" class="update-card">
+                <div class="card-content">
+                    <i class="fas fa-book"></i>
+                    <span>الكتاب الأبيض</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="barnamaj-istijali.html" class="update-card" style="border-right-color: #dc2626;">
+                <div class="card-content">
+                    <i class="fas fa-bolt"></i>
+                    <span>المخطط الاستعجالي</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="timss-pirls.html" class="update-card">
+                <div class="card-content">
+                    <i class="fas fa-chart-line"></i>
+                    <span>تقارير TIMSS و PIRLS</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="roya-istratigiya.html" class="update-card" style="border-right-color: #7c3aed;">
+                <div class="card-content">
+                    <i class="fas fa-eye"></i>
+                    <span>الرؤية الإستراتيجية 2015-2030</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="qanoun-itar.html" class="update-card">
+                <div class="card-content">
+                    <i class="fas fa-gavel"></i>
+                    <span>القانون الإطار</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="nmodaj-tanmawi.html" class="update-card">
+                <div class="card-content">
+                    <i class="fas fa-seedling"></i>
+                    <span>النموذج التنموي الجديد</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="kharitat-tariq.html" class="update-card" style="border-right-color: #fbbf24;">
+                <div class="card-content">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>خارطة الطريق 2022-2026</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
+            <a href="taalim-sarih.html" class="update-card">
+                <div class="card-content">
+                    <i class="fas fa-chalkboard"></i>
+                    <span>التعليم الصريح (Explicit Instruction)</span>
+                </div>
+                <i class="fas fa-chevron-left arrow-icon"></i>
+            </a>
+
         </div>
-        
-        <div class="card">
-        <a href="Almitaq.html">الميثاق الوطني للتربية والتكوين</a>
-    </div>
+    </main>
 
-    <div class="card">
-        <a href="livre-blanc.html">الكتاب الأبيض</a>
-    </div>
-
-    <div class="card">
-        <a href="barnamaj-istijali.html">المخطط الاستعجالي</a>
-    </div>
-
-    <div class="card">
-        <a href="timss-pirls.html">تقارير TIMSS و PIRLS</a>
-    </div>
-
-    <div class="card">
-        <a href="roya-istratigiya.html">الرؤية الإستراتيجية 2015-2030</a>
-    </div>
-
-    <div class="card">
-        <a href="qanoun-itar.html">القانون الإطار</a>
-    </div>
-
-    <div class="card">
-        <a href="nmodaj-tanmawi.html">النموذج التنموي الجديد</a>
-    </div>
-
-    <div class="card">
-        <a href="kharitat-tariq.html">خارطة الطريق</a>
-    </div>
-
-    <div class="card">
-        <a href="taalim-sarih.html">التعليم الصريح</a>
-    </div>
-    </div>
+        <footer>
+        <div class="footer-links">
+            <a href="about.html">من نحن</a>
+            <a href="privacy.html">سياسة الخصوصية</a>
+            <a href="terms.html">الشروط والأحكام</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+        <div class="copyright">
+            <p>© 2026 منصة تربويات - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 5px; opacity: 0.7;">صنع بشغف لخدمة التربية و التعليم</p>
+        </div>
+    </footer>
 
 </body>
 </html>
