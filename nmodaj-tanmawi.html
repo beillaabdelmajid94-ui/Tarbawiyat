@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التعليم وفق النموذج التنموي - سناء أولاد الغرس</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+        }
+        .footer-link {
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #3b82f6;
+        }
+        /* تنسيق خاص للإقتباسات */
+        .article-quote {
+            position: relative;
+            padding-right: 2rem;
+        }
+        .article-quote::before {
+            content: '\f10d';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            top: -0.5rem;
+            right: 0;
+            font-size: 1.5rem;
+            color: #cbd5e1;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900 flex flex-col min-h-screen">
+
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white pt-6 pb-20 px-4 shadow-lg rounded-b-[3rem] mb-12 relative">
+        <nav class="max-w-6xl mx-auto flex flex-wrap gap-4 mb-10">
+            <a href="index.html" class="flex items-center gap-2 text-sm font-bold text-white/90 bg-white/10 hover:bg-white/25 hover:text-white px-5 py-2.5 rounded-full backdrop-blur-md transition-all shadow-sm border border-white/20">
+                <i class="fas fa-home"></i> الرئيسية
+            </a>
+            <a href="almostajadat.html" class="flex items-center gap-2 text-sm font-bold text-white/90 bg-white/10 hover:bg-white/25 hover:text-white px-5 py-2.5 rounded-full backdrop-blur-md transition-all shadow-sm border border-white/20">
+                <i class="fas fa-arrow-right"></i> العودة للمستجدات
+            </a>
+        </nav>
+
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="bg-blue-900/50 text-blue-100 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block border border-blue-400/30">مقال تحليلي</span>
+            <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight">التعليم وفق النموذج التنموي من التصور إلى التنزيل [cite: 19]</h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-blue-100 text-sm font-medium">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-user-edit"></i>
+                    <span>الباحثة: سناء أولاد الغرس [cite: 19]</span>
+                </div>
+                <span class="hidden md:inline">•</span>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-university"></i>
+                    <span>جامعة عبد المالك السعدي [cite: 21]</span>
+                </div>
+                <span class="hidden md:inline">•</span>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-book"></i>
+                    <span>مجلة المعرفة (العدد 19) [cite: 32]</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 md:px-8 mb-20 space-y-10 flex-grow -mt-16 relative z-10">
+
+        <section class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 flex flex-col md:flex-row gap-8 items-start">
+            <div class="w-full md:w-1/3 bg-slate-50 p-6 rounded-xl border border-slate-100">
+                <h3 class="font-bold text-slate-800 mb-4 border-b border-slate-200 pb-2">عن الباحثة</h3>
+                <ul class="text-sm text-slate-600 space-y-3 leading-relaxed">
+                    <li class="flex items-start gap-2"><i class="fas fa-graduation-cap text-blue-500 mt-1"></i> طالبة باحثة بسلك الدكتوراه، جغرافيا بشرية[cite: 20].</li>
+                    <li class="flex items-start gap-2"><i class="fas fa-briefcase text-blue-500 mt-1"></i> إطار بالأكاديمية الجهوية للتربية والتكوين لجهة طنجة تطوان الحسيمة[cite: 22].</li>
+                    <li class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-blue-500 mt-1"></i> المغرب[cite: 23].</li>
+                </ul>
+            </div>
+            
+            <div class="w-full md:w-2/3">
+                <h2 class="text-2xl font-bold text-blue-700 mb-4 flex items-center gap-2">
+                    <i class="fas fa-align-right text-xl"></i> ملخص المقال
+                </h2>
+                <p class="text-slate-600 leading-relaxed text-justify mb-4">
+                    عرف قطاع التعليم بالمغرب مجموعة من الإصلاحات المتعاقبة بتعاقب الحكومات على تدبيره[cite: 25]. وبالرغم من إخفاق هذه الأخيرة في إرساء منظومة تربوية ملائمة للمجتمع المغربي في تحولاته وتطلعاته نحو المستقبل، إلا أنها راكمت مجموعة من التجارب والممارسات يمكن اعتمادها كمرجع لبناء مستقبلي[cite: 26]. 
+                </p>
+                <p class="text-slate-600 leading-relaxed text-justify">
+                    وفي خضم أجرأة الرؤية الاستراتيجية للإصلاح 2015-2030، والتطلع إلى تحقيق الجودة لتجاوز الأزمة البنيوية لقطاع التعليم، صدر تقرير النموذج التنموي في أبريل 2021م، مؤكداً على أهمية النهضة التربوية وعلاقتها بالتنمية الشاملة للبلاد [cite: 27]، مشيراً إلى أزمة النظام التربوي التي تكبح دوره في تحقيق الارتقاء الاجتماعي للفرد، ومقترحاً لمجموعة من التوصيات قصد تجاوزها[cite: 28].
+                </p>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-10 transition duration-300 hover:shadow-md relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-2 h-full bg-emerald-500"></div>
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">تقديم</h2>
+            <p class="text-slate-600 leading-relaxed text-justify mb-4">
+                إن مسألة التعليم لم تعد محل جدل في كل دول العالم من حيث علاقتها الوطيدة بنهضة الأمم، فقد أثبتت التجارب الدولية أن البداية الحقيقية لتقدم الدول تكمن في مدى الأهمية التي تمنحها للتعليم والتطور العلمي[cite: 49]. فالاهتمام بالتعليم ليس وليد اللحظة وغير مرهون بالتقدم التكنولوجي والعلمي، بل اهتم به الفلاسفة والمفكرون وأدركوا أهميته منذ زمن بعيد[cite: 50]:
+            </p>
+            <ul class="space-y-4 mb-4">
+                <li class="bg-slate-50 p-4 rounded-lg border border-slate-100 article-quote">قال الفيلسوف أرسطو أن "المتعلم يختلف عن غير المتعلم بقدر اختلاف الحي عن الميت"[cite: 50].</li>
+                <li class="bg-slate-50 p-4 rounded-lg border border-slate-100 article-quote">أشار بنجامين فرانكلين إلى أن "الاستثمار في المعرفة يحقق أفضل عائد"[cite: 50].</li>
+                <li class="bg-slate-50 p-4 rounded-lg border border-slate-100 article-quote">أكد جون ديوي أن "التعليم ليس إعدادا للحياة، بل هو الحياة نفسها"[cite: 50].</li>
+                <li class="bg-slate-50 p-4 rounded-lg border border-slate-100 article-quote">من أشهر مقولات نلسون مانديلا: "إن التعليم هو السلاح الأقوى الذي يمكنك استخدامه لتغير العالم، وأن التعليم هو المحرك الأعظم في التنمية"[cite: 51].</li>
+            </ul>
+            <p class="text-slate-600 leading-relaxed text-justify font-medium">
+                نستشف من كل هذه الاقتباسات إجماع كل المهتمين بالعلم والمعرفة على مر التاريخ أن الشعب المتعلم يخلق أمة متعلمة[cite: 52].
+            </p>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 transition duration-300 hover:shadow-md relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-blue-500"></div>
+                <h2 class="text-xl font-bold text-slate-800 mb-4">أولاً: النظام التعليمي بالمغرب قبل النموذج التنموي</h2>
+                <p class="text-slate-600 leading-relaxed text-justify text-sm mb-4">
+                    بالنسبة للمغرب وكباقي الدول المستعمرة فقد عمل بعد حصوله على الاستقلال على تبني مجموعة من المحاولات الإصلاحية المتوالية بغرض التدبير الأمثل لقطاع التعليم ونفض غبار الحماية الفرنسية عليه[cite: 54]. وبالفعل فقد نجح في خفض معدل الأمية... من 87% سنة 1960م إلى 32% سنة 2014م[cite: 55].
+                </p>
+                <p class="text-slate-600 leading-relaxed text-justify text-sm mb-4">
+                    إلا أن المنظومة التعليمية وعلى مر زهاء 67 سنة من المخططات الإصلاحية... لم تتمكن من النجاح في إرساء منظومة تربوية ملائمة للمجتمع المغربي[cite: 56]. بالرغم من الإمكانيات المهمة... حيث يتم سنويا تخصيص 20% من ميزانية الدولة للتربية الوطنية، أي ما يفوق 62 مليار درهم سنة 2022م[cite: 57].
+                </p>
+                <div class="bg-red-50 text-red-700 p-4 rounded-lg text-sm border border-red-100 font-semibold mt-auto">
+                    <i class="fas fa-exclamation-triangle ml-2"></i> وهذا ما تؤكده التقييمات: ما يقرب من ثلثي أطفال المدرسة العمومية غير متمكنين من التعلمات الأساسية[cite: 58].
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 transition duration-300 hover:shadow-md relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-2 h-full bg-amber-500"></div>
+                <h2 class="text-xl font-bold text-slate-800 mb-4">ثانياً: وضعية قطاع التعليم حسب النموذج التنموي</h2>
+                <p class="text-slate-600 leading-relaxed text-justify text-sm mb-4">
+                    لا يخفى على الجميع أهمية قطاع التعليم في السياسة العامة للبلاد، فهو يحتل المركز الثاني بعد الوحدة الترابية[cite: 60]. انطلاقا من المخططات الخماسية والثلاثية مرورا بالميثاق الوطني وصولا إلى البرنامج الاستعجالي[cite: 61].
+                </p>
+                <p class="text-slate-600 leading-relaxed text-justify text-sm mb-4">
+                    وأمام تفاقم الوضع التعليمي في البلاد، قام المجلس الأعلى بصياغة رؤية استراتيجية 2015-2030[cite: 65]. بعد عملية الرصد التشخيصي، خلصت أشغال لجنة النموذج التنموي إلى أزمة النظام التربوي في ثلاثة أبعاد[cite: 69]:
+                </p>
+                <ul class="space-y-3 mt-4">
+                    <li class="flex gap-3 items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="w-6 h-6 rounded bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">1</span>
+                        <span class="text-sm text-slate-700 font-medium">ضعف جودة التعلمات[cite: 70].</span>
+                    </li>
+                    <li class="flex gap-3 items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="w-6 h-6 rounded bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">2</span>
+                        <span class="text-sm text-slate-700 font-medium">أزمة ثقة المغاربة إزاء المؤسسة التربوية[cite: 71].</span>
+                    </li>
+                    <li class="flex gap-3 items-start bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <span class="w-6 h-6 rounded bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">3</span>
+                        <span class="text-sm text-slate-700 font-medium">أزمة في مكانة المدرسة التي تعطلت وظيفتها كمصعد اجتماعي[cite: 72].</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-10 transition duration-300 hover:shadow-md relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-2 h-full bg-purple-500"></div>
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">ثالثاً: استشراف النموذج التنموي لمستقبل تربوي في أفق سنة 2035م</h2>
+            <p class="text-slate-600 leading-relaxed text-justify mb-6">
+                تضمن تقرير النموذج التنموي في محوره الثاني خيارات استراتيجية لاستشراف مستقبل تربوي في أفق 2035 [cite: 74]، وهي: تحقيق جودة التعليم للجميع [cite: 75]، منظومة للتعليم العالي ترتكز على حسن الأداء والحكامة [cite: 76]، وجودة الخدمات الصحية[cite: 77]. وأكد التقرير أن قضية التربية تبقى من الاهتمامات الأساسية الأولى للمغاربة[cite: 79].
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-purple-50/50 p-6 rounded-xl border border-purple-100">
+                    <h3 class="font-bold text-purple-800 mb-4 flex items-center gap-2"><i class="fas fa-check-circle"></i> شروط تحقيق الجودة بالمدرسة العمومية</h3>
+                    <ul class="list-disc list-inside text-sm text-slate-700 space-y-2">
+                        <li>الاستثمار في تكوين وتحفيز المدرسين[cite: 81].</li>
+                        <li>إعادة تنظيم المسار الدراسي ونظام التقييم[cite: 85].</li>
+                        <li>تجديد المحتويات والطرق البيداغوجية[cite: 85].</li>
+                        <li>تحمل المسؤولية من قبل المؤسسات لتعبئة الفاعلين[cite: 86].</li>
+                        <li>تعزيز قدرات التخطيط والتنفيذ[cite: 86].</li>
+                    </ul>
+                </div>
+                <div class="bg-purple-50/50 p-6 rounded-xl border border-purple-100">
+                    <h3 class="font-bold text-purple-800 mb-4 flex items-center gap-2"><i class="fas fa-graduation-cap"></i> شروط حسن أداء منظومة التعليم العالي</h3>
+                    <ul class="list-disc list-inside text-sm text-slate-700 space-y-2">
+                        <li>حكامة مستقلة للمؤسسات[cite: 88].</li>
+                        <li>وضع الطالب في صلب الإصلاحات[cite: 88].</li>
+                        <li>تعزيز تثمين التكوين المهني والتناوب[cite: 89].</li>
+                        <li>تطوير بحث متميز في الجامعات مع آليات تمويل[cite: 90].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-8 md:p-10 transition duration-300 hover:shadow-md relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-2 h-full bg-teal-500"></div>
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">رابعاً: المنظومة التربوية وفق النموذج التنموي (من التصور إلى التنزيل)</h2>
+            <p class="text-slate-600 leading-relaxed text-justify mb-8">
+                سارعت الوزارة إلى إطلاق مشاورات وطنية موسعة[cite: 92]. وتماشيا مع منطق الديموقراطية التشاركية عملت على توسيع قاعدة مشاركة الأفراد[cite: 93]. وقد شملت هذه المشاورات أرقاماً غير مسبوقة:
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-center">
+                <div class="bg-teal-50 p-4 rounded-xl border border-teal-100">
+                    <div class="text-2xl font-black text-teal-600 mb-1">1,766</div>
+                    <div class="text-xs text-slate-600 font-bold">مؤسسة تعليمية [cite: 98]</div>
+                </div>
+                <div class="bg-teal-50 p-4 rounded-xl border border-teal-100">
+                    <div class="text-2xl font-black text-teal-600 mb-1">21,837</div>
+                    <div class="text-xs text-slate-600 font-bold">أستاذ وأستاذة [cite: 99]</div>
+                </div>
+                <div class="bg-teal-50 p-4 rounded-xl border border-teal-100">
+                    <div class="text-2xl font-black text-teal-600 mb-1">33,493</div>
+                    <div class="text-xs text-slate-600 font-bold">تلميذ وتلميذة [cite: 100]</div>
+                </div>
+                <div class="bg-teal-50 p-4 rounded-xl border border-teal-100">
+                    <div class="text-2xl font-black text-teal-600 mb-1">20,666</div>
+                    <div class="text-xs text-slate-600 font-bold">أسرة [cite: 101]</div>
+                </div>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">محاور خارطة الطريق 2022-2026</h3>
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center shrink-0 text-xl"><i class="fas fa-child"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-2">محور التلميذ</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed text-justify">تطوير تعليم أولي ذي جودة في أفق تعميمه سنة 2027. تنظيم مسار التلميذ عبر اعتماد مقاربة (TaRL) والدعم التربوي. وضع آلية لمحاربة الهدر المدرسي وتعميم تدريجي للغة الإنجليزية وتعميم الأنشطة الاعتيادية.</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center shrink-0 text-xl"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-2">محور الأستاذ</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed text-justify">تثمين مسار التعليم المهني عبر تبني مقاربة الأستاذ المتخصص. اعتماد مقاربة التدريس الناجع القائمة على التدرج في بناء المكتسبات.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center shrink-0 text-xl"><i class="fas fa-school"></i></div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-2">محور المؤسسة (مؤسسات الريادة)</h4>
+                        <p class="text-sm text-slate-600 leading-relaxed text-justify">إحداث مؤسسات تعليمية عصرية يديرها طاقم تربوي دينامي. تنزيل مرحلة تجريبية في 628 مؤسسة تعليمية ابتدائية، بمشاركة 322,000 تلميذ، و 10,700 أستاذ، ومواكبة 158 مفتشاً.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-100 p-5 rounded-xl border border-slate-200 mt-8">
+                <h4 class="font-bold text-slate-800 mb-2">شروط إحداث الأثر المنشود:</h4>
+                <ol class="list-decimal list-inside text-sm text-slate-700 font-medium space-y-1">
+                    <li>تأمين الموارد المالية اللازمة.</li>
+                    <li>التزام الفاعلين بالبناء المشترك للإصلاح.</li>
+                    <li>تعزيز قدرات الفاعلين من خلال مساءلتهم عن الأثر على المتعلم.</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="bg-slate-800 text-white rounded-2xl shadow-lg p-8 md:p-10 relative overflow-hidden">
+            <h2 class="text-2xl font-bold mb-4 text-blue-300">خلاصة القول</h2>
+            <p class="text-slate-300 leading-relaxed text-justify mb-4 text-sm md:text-base">
+                أصبح التدبير المجالي لقطاع التعليم يشكل أهمية وراهنية على المستوى الوطني... فالحاجة ملحة لتدبير مجالي مغاير للتدبير الكلاسيكي. وقد أجمع كل المدبرين على أن التنفيذ التشاركي أداة حقيقية لتجاوز النقص.
+            </p>
+            <p class="text-slate-300 leading-relaxed text-justify mb-4 text-sm md:text-base">
+                إن البناء المشترك لخارطة الطريق 2022-2026 كمسؤولية حضارية كان سابقة في تاريخ المنظومة. فالحوار العمومي يستدعي انخراط مختلف الفاعلين لكسب رهان التنمية.
+            </p>
+            <p class="font-bold text-blue-100 text-lg border-r-4 border-blue-400 pr-4 mt-6 py-2">
+                "والأكيد أن التعليم ببلادنا اليوم في منعطف التغيير لرسم معالم المدرسة العمومية ذات الجودة التربوية التي تستجيب لانتظارات المغاربة في المستقبل القريب وفق مقومات النجاح التي رسمها النموذج التنموي الجديد للبلاد."
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-6 px-6 border-t-[6px] border-blue-600 mt-auto z-10 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 text-right">
+            <div>
+                <h2 class="text-white font-black text-xl mb-6">تربويات المغرب</h2>
+                <p class="text-sm leading-relaxed mb-6">المنصة الأولى المتخصصة في علوم التربية والديداكتيك ومواكبة مستجدات إصلاح منظومة التعليم بالمملكة.</p>
+                <div class="flex gap-4">
+                    <a href="#" aria-label="تابعنا على فيسبوك" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="تواصل معنا عبر واتساب" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-green-600 transition-all text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-6">أقسام المنصة</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="footer-link">علوم التربية</a></li>
+                    <li><a href="#" class="footer-link">الديداكتيك</a></li>
+                    <li><a href="almostajadat.html" class="footer-link">المستجدات</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-6">الدعم والقوانين</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="footer-link">سياسة الخصوصية</a></li>
+                    <li><a href="#" class="footer-link">الشروط والأحكام</a></li>
+                    <li><a href="#" class="footer-link">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-6">النشرة التربوية</h3>
+                <p class="text-xs mb-4">اشترك لتصلك آخر المستجدات البيداغوجية.</p>
+                <form action="#" class="flex gap-2">
+                    <label for="newsletter-email" class="sr-only">البريد الإلكتروني</label>
+                    <input id="newsletter-email" type="email" placeholder="بريدك الإلكتروني" class="bg-slate-900 border-none rounded-lg p-2 text-xs w-full outline-none text-white focus:ring-2 focus:ring-blue-500" required>
+                    <button type="submit" class="bg-blue-600 text-white px-3 rounded-lg text-xs font-bold hover:bg-blue-500 transition-colors">اشترك</button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-slate-900 pt-8 text-center text-xs">
+            <p>© 2026 منصة تربويات - جميع الحقوق محفوظة 🇲🇦</p>
+            <p style="margin-top: 5px; opacity: 0.5;">صنع بشغف لخدمة التربية والتعليم</p>
+        </div>
+    </footer>
+
+</body>
+</html>
