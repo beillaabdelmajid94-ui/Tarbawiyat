@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الديداكتيك - منصة تربويات المغرب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Cairo', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8fafc;
+        }
+        .footer-link {
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #10b981;
+        }
+        .level-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-emerald-200 flex flex-col min-h-screen">
+
+    <header class="bg-gradient-to-r from-emerald-800 to-teal-600 text-white pt-6 pb-20 px-4 shadow-lg rounded-b-[3rem] mb-12 relative">
+        <nav class="max-w-6xl mx-auto flex flex-wrap gap-4 mb-10">
+            <a href="index.html" class="flex items-center gap-2 text-sm font-bold text-white/90 bg-white/10 hover:bg-white/25 hover:text-white px-5 py-2.5 rounded-full backdrop-blur-md transition-all shadow-sm border border-white/20">
+                <i class="fas fa-home"></i> الصفحة الرئيسية
+            </a>
+        </nav>
+
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="bg-emerald-900/50 text-emerald-100 px-4 py-1.5 rounded-full text-sm font-semibold mb-4 inline-block border border-emerald-400/30">الفن البيداغوجي</span>
+            <h1 class="text-3xl md:text-5xl font-black mb-6 leading-tight">الديداكتيك: علم تدريس المواد</h1>
+            <p class="text-emerald-50 text-lg opacity-90 max-w-2xl mx-auto">الدليل الشامل للمفاهيم الديداكتيكية ومنهجيات التدريس حسب الأسلاك التعليمية بالمغرب</p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 md:px-8 mb-20 space-y-16 flex-grow -mt-16 relative z-10">
+
+        <section class="bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-emerald-700 mb-6 flex items-center gap-3">
+                        <i class="fas fa-microscope text-3xl"></i> تعريف الديداكتيك (Didactics)
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-justify mb-4">
+                        الديداكتيك هو الدراسة العلمية لتنظيم وضعيات التعلم التي يعيشها المتعلم لبلوغ أهداف معرفية أو وجدانية أو حركية. ويتميز عن البيداغوجيا بكونه يركز على **"المادة الدراسية"** (كيف تدرس؟) بينما تركز البيداغوجيا على العلاقة التربوية (كيف نربي؟).
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-slate-700 bg-slate-50 p-3 rounded-xl border-r-4 border-emerald-500">
+                            <i class="fas fa-check-circle text-emerald-500"></i>
+                            <span><strong>الديداكتيك العامة:</strong> تهتم بالقضايا المشتركة بين المواد.</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-700 bg-slate-50 p-4 rounded-xl border-r-4 border-emerald-500">
+                            <i class="fas fa-check-circle text-emerald-500"></i>
+                            <span><strong>الديداكتيك الخاصة:</strong> تهتم بمنهجية تدريس مادة بعينها.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-emerald-50 rounded-2xl p-8 flex flex-col items-center justify-center border border-emerald-100 text-center">
+                    <i class="fas fa-project-diagram text-7xl text-emerald-600 mb-4 opacity-40"></i>
+                    <h3 class="text-xl font-bold text-emerald-800 mb-2">المثلث الديداكتيكي</h3>
+                    <p class="text-sm text-emerald-700">التفاعل الثلاثي بين (المدرس - المتعلم - المعرفة)</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold text-slate-800 mb-8 text-center">التخصصات حسب الأسلاك التعليمية</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="level-card bg-white rounded-2xl shadow-md border border-slate-100 p-8 transition-all group border-b-4 border-b-blue-500">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                        <i class="fas fa-child text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">التعليم الابتدائي</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">يركز على بناء التعلمات الأساسية (القراءة، الكتابة، الحساب) عبر بيداغوجيا اللعب والوحدات الموضوعاتية.</p>
+                    <a href="#" class="text-blue-600 font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">دليل ديداكتيك الابتدائي <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="level-card bg-white rounded-2xl shadow-md border border-slate-100 p-8 transition-all group border-b-4 border-b-amber-500">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-all">
+                        <i class="fas fa-user-graduate text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">التعليم الإعدادي</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">الانتقال نحو التخصص العلمي والأدبي، والتركيز على المقاربة بالكفايات وتنمية التفكير النقدي.</p>
+                    <a href="#" class="text-amber-600 font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">دليل ديداكتيك الإعدادي <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+                <div class="level-card bg-white rounded-2xl shadow-md border border-slate-100 p-8 transition-all group border-b-4 border-b-purple-500">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                        <i class="fas fa-university text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">التعليم التأهيلي</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">تعميق التخصص المعرفي، التحضير للتعليم العالي، والتركيز على الاستقلالية في التعلم والبحث العلمي.</p>
+                    <a href="#" class="text-purple-600 font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all">دليل ديداكتيك التأهيلي <i class="fas fa-arrow-left"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 relative overflow-hidden">
+            <div class="relative z-10 flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-3/5">
+                    <h2 class="text-3xl font-black mb-6 text-emerald-400">أهمية التوجيهات التربوية للأستاذ</h2>
+                    <p class="text-slate-300 leading-relaxed text-justify mb-6">
+                        تعتبر التوجيهات التربوية والبرامج الخاصة بكل مادة بمثابة **"البوصلة المهنية"** للأستاذ. إنها ليست مجرد وثيقة إدارية، بل هي إطار ديداكتيكي يحدد:
+                    </p>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <li class="flex items-center gap-2 text-sm bg-white/5 p-3 rounded-lg border border-white/10">
+                            <i class="fas fa-caret-left text-emerald-400"></i> الغايات والكفايات المستهدفة.
+                        </li>
+                        <li class="flex items-center gap-2 text-sm bg-white/5 p-3 rounded-lg border border-white/10">
+                            <i class="fas fa-caret-left text-emerald-400"></i> المنهجية المعتمدة لتقديم الدروس.
+                        </li>
+                        <li class="flex items-center gap-2 text-sm bg-white/5 p-3 rounded-lg border border-white/10">
+                            <i class="fas fa-caret-left text-emerald-400"></i> طرق تدبير الحصص والزمن المدرسي.
+                        </li>
+                        <li class="flex items-center gap-2 text-sm bg-white/5 p-3 rounded-lg border border-white/10">
+                            <i class="fas fa-caret-left text-emerald-400"></i> أساليب التقويم والدعم التربوي.
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-2/5 text-center">
+                    <div class="bg-emerald-600/20 border-2 border-emerald-500/50 p-8 rounded-2xl backdrop-blur-sm">
+                        <i class="fas fa-file-pdf text-5xl mb-4 text-emerald-400"></i>
+                        <h4 class="font-bold mb-4">دليل التوجيهات الرسمية</h4>
+                        <p class="text-xs text-slate-400 mb-6">يجب على كل أستاذ الإلمام التام بالمنهاج الدراسي والوثائق المرافقة له لضمان نجاعة التدريس.</p>
+                        <button class="bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-2 rounded-full text-sm font-bold transition-all">تحميل الدلائل</button>
+                    </div>
+                </div>
+            </div>
+            <i class="fas fa-quote-right absolute -top-10 -left-10 text-[15rem] text-white/5"></i>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-950 text-slate-400 pt-16 pb-6 px-6 border-t-[6px] border-emerald-600 mt-auto z-10 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 text-right">
+            <div>
+                <h2 class="text-white font-black text-xl mb-6">تربويات المغرب</h2>
+                <p class="text-sm leading-relaxed mb-6">المنصة الأولى المتخصصة في علوم التربية والديداكتيك ومواكبة مستجدات إصلاح منظومة التعليم بالمملكة.</p>
+                <div class="flex gap-4">
+                    <a href="#" aria-label="تابعنا على فيسبوك" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="تواصل معنا عبر واتساب" class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center hover:bg-green-600 transition-all text-white"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-6">أقسام المنصة</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="footer-link">علوم التربية</a></li>
+                    <li><a href="#" class="footer-link">الديداكتيك</a></li>
+                    <li><a href="almostajadat.html" class="footer-link">المستجدات</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-6">الدعم والقوانين</h3>
+                <ul class="space-y-4 text-sm">
+                    <li><a href="#" class="footer-link">سياسة الخصوصية</a></li>
+                    <li><a href="#" class="footer-link">الشروط والأحكام</a></li>
+                    <li><a href="#" class="footer-link">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white font-bold mb-6">النشرة التربوية</h3>
+                <p class="text-xs mb-4">اشترك لتصلك آخر المستجدات البيداغوجية.</p>
+                <form action="#" class="flex gap-2">
+                    <label for="newsletter-email" class="sr-only">البريد الإلكتروني</label>
+                    <input id="newsletter-email" type="email" placeholder="بريدك الإلكتروني" class="bg-slate-900 border-none rounded-lg p-2 text-xs w-full outline-none text-white focus:ring-2 focus:ring-blue-500" required>
+                    <button type="submit" class="bg-blue-600 text-white px-3 rounded-lg text-xs font-bold hover:bg-blue-500 transition-colors">اشترك</button>
+                </form>
+            </div>
+        </div>
+        <div class="border-t border-slate-900 pt-8 text-center text-xs">
+            <p>© 2026 منصة تربويات - جميع الحقوق محفوظة 🇲🇦</p>
+            <p style="margin-top: 5px; opacity: 0.5;">صنع بشغف لخدمة التربية والتعليم</p>
+        </div>
+    </footer>
+
+</body>
+</html>
