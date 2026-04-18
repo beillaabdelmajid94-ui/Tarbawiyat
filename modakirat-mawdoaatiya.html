@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مجموع المذكرات الموضوعاتية والرهانات والمشاريع – النموذج التنموي الجديد</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700;900&display=swap');
+
+:root {
+  --primary: #1a3a5c;
+  --secondary: #c8a84b;
+  --accent: #2c7a4b;
+  --light-bg: #f4f6f9;
+  --card-bg: #ffffff;
+  --text-dark: #1a1a2e;
+  --text-mid: #444;
+  --text-light: #666;
+  --border: #dde3ec;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Cairo', 'Tajawal', 'Arial', sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text-dark);
+  background: var(--light-bg);
+  direction: rtl;
+}
+
+/* ─── الشريط العلوي ─── */
+.top-bar {
+  background: var(--primary);
+  color: #cfe0f5;
+  font-size: 13px;
+  padding: 8px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ─── الرأس ─── */
+header {
+  background: linear-gradient(135deg, #1a3a5c 0%, #0f2540 60%, #2c7a4b 100%);
+  color: #fff;
+  padding: 70px 60px 50px;
+  position: relative;
+  overflow: hidden;
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: -60px;
+  width: 280px; height: 280px;
+  background: rgba(200,168,75,0.12);
+  border-radius: 50%;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; right: -50px;
+  width: 350px; height: 350px;
+  background: rgba(44,122,75,0.1);
+  border-radius: 50%;
+}
+.header-inner { position: relative; z-index: 2; max-width: 900px; }
+.badge {
+  display: inline-block;
+  background: var(--secondary);
+  color: #1a1a1a;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 18px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+header h1 {
+  font-size: 2.9em;
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+header .sub {
+  font-size: 1.3em;
+  color: #a8cfee;
+  margin-bottom: 6px;
+}
+header .meta { font-size: 1em; color: #7aadce; margin-top: 20px; }
+header .meta span { margin-left: 25px; }
+
+/* ─── الإحصائيات الكبيرة ─── */
+.stats-strip {
+  background: var(--secondary);
+  padding: 30px 60px;
+  display: flex;
+  gap: 0;
+}
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 10px 20px;
+  border-left: 1px solid rgba(0,0,0,0.15);
+}
+.stat:last-child { border-left: none; }
+.stat .num {
+  font-size: 2.8em;
+  font-weight: 900;
+  color: #1a1a1a;
+  display: block;
+}
+.stat .lbl {
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ─── التنقل ─── */
+.toc-bar {
+  background: var(--primary);
+  padding: 0 60px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.toc-bar a {
+  color: #a8cfee;
+  text-decoration: none;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+.toc-bar a:hover { color: var(--secondary); border-color: var(--secondary); }
+
+/* ─── المحتوى ─── */
+.container { max-width: 1180px; margin: 0 auto; padding: 50px 40px; }
+
+/* ─── أقسام ─── */
+.section { margin-bottom: 70px; }
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 16px;
+  border-bottom: 3px solid var(--primary);
+}
+.section-icon {
+  width: 52px; height: 52px;
+  background: var(--primary);
+  color: white;
+  font-size: 24px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.section-title { font-size: 1.9em; font-weight: 900; color: var(--primary); }
+.section-subtitle { font-size: 1em; color: var(--text-light); margin-top: 4px; }
+
+/* ─── بطاقة المحور ─── */
+.axis-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.axis-card-header {
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.axis-num {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.4em;
+  font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.axis-card-header h3 { font-size: 1.35em; font-weight: 800; }
+.axis-card-body { padding: 0 28px 24px; }
+.axis-desc { font-size: 1.05em; color: var(--text-mid); line-height: 1.85; margin-bottom: 18px; text-align: justify; }
+
+/* ─── شبكة الميزات ─── */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+.feature-item {
+  background: var(--light-bg);
+  border-radius: 8px;
+  padding: 16px 18px;
+  border-right: 4px solid;
+  font-size: 1em;
+  line-height: 1.7;
+  color: var(--text-mid);
+}
+.feature-item strong { display: block; font-size: 1.05em; margin-bottom: 5px; }
+
+/* ─── الأرقام والبيانات ─── */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+.data-box {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 22px 20px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 4px solid;
+}
+.data-box .big { font-size: 2.2em; font-weight: 900; }
+.data-box .small { font-size: 0.9em; color: var(--text-light); margin-top: 6px; line-height: 1.5; }
+
+/* ─── الأهداف ─── */
+.goals-list { list-style: none; }
+.goals-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--card-bg);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+.goals-list li::before {
+  content: '←';
+  color: var(--secondary);
+  font-size: 1.2em;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.goals-list .from { color: var(--text-light); }
+.goals-list .to { color: var(--accent); font-weight: 700; }
+
+/* ─── الفراغ لإبراز النص ─── */
+.highlight-box {
+  background: linear-gradient(135deg, #1a3a5c 0%, #2c5f8a 100%);
+  color: white;
+  border-radius: var(--radius);
+  padding: 30px 35px;
+  margin: 28px 0;
+  font-size: 1.1em;
+  line-height: 1.9;
+  text-align: justify;
+}
+.highlight-box h4 { font-size: 1.2em; margin-bottom: 12px; color: var(--secondary); }
+
+.green-box {
+  background: linear-gradient(135deg, #1d5c3a 0%, #2c7a4b 100%);
+  color: white;
+  border-radius: var(--radius);
+  padding: 30px 35px;
+  margin: 28px 0;
+  font-size: 1.05em;
+  line-height: 1.9;
+}
+.green-box h4 { font-size: 1.2em; margin-bottom: 12px; color: #9de8be; }
+
+/* ─── التوجهات ─── */
+.strategy-block {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 26px 30px;
+  margin-bottom: 18px;
+  border-right: 5px solid;
+  box-shadow: var(--shadow);
+  font-size: 1.05em;
+  line-height: 1.85;
+  color: var(--text-mid);
+  text-align: justify;
+}
+.strategy-block h4 { font-size: 1.1em; font-weight: 800; margin-bottom: 10px; }
+
+/* ─── جدول المحتويات ─── */
+.toc-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 32px 36px;
+  box-shadow: var(--shadow);
+  margin-bottom: 40px;
+}
+.toc-card h3 { font-size: 1.3em; color: var(--primary); margin-bottom: 20px; font-weight: 800; }
+.toc-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.toc-cols a {
+  display: block;
+  padding: 10px 14px;
+  background: var(--light-bg);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 0.97em;
+  font-weight: 600;
+  border-right: 3px solid var(--secondary);
+  transition: all 0.2s;
+}
+.toc-cols a:hover { background: #dce7f5; }
+
+/* ─── المشاريع والرهانات ─── */
+.project-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin-bottom: 26px;
+  border: 1px solid var(--border);
+}
+.project-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.tag-project { background: #e8f5e9; color: #2e7d32; }
+.tag-bet { background: #fff3e0; color: #e65100; }
+.project-card-body { padding: 24px 28px; }
+.project-card-body h4 { font-size: 1.25em; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
+.project-card-body p { font-size: 1.03em; color: var(--text-mid); line-height: 1.85; text-align: justify; }
+
+/* ─── الجدول ─── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin: 24px 0;
+  font-size: 1em;
+}
+thead tr { background: var(--primary); color: white; }
+th { padding: 16px 18px; text-align: right; font-size: 1em; font-weight: 700; }
+td { padding: 14px 18px; border-bottom: 1px solid var(--border); color: var(--text-mid); line-height: 1.7; }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #f8fafc; }
+.arrow { color: var(--accent); font-weight: 900; }
+
+/* ─── الفاصل ─── */
+.divider {
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary), transparent);
+  margin: 55px 0;
+  border-radius: 2px;
+}
+
+/* ─── التذييل ─── */
+footer {
+  background: var(--primary);
+  color: #a8cfee;
+  padding: 40px 60px;
+  text-align: center;
+  font-size: 0.95em;
+  line-height: 2;
+}
+footer strong { color: white; font-size: 1.05em; }
+
+/* ─── ألوان المحاور ─── */
+.c1 { color: #1565C0; }
+.c2 { color: #2e7d32; }
+.c3 { color: #6a1b9a; }
+.c4 { color: #bf360c; }
+.bg1 { background: #1565C0; }
+.bg2 { background: #2e7d32; }
+.bg3 { background: #6a1b9a; }
+.bg4 { background: #bf360c; }
+.border1 { border-color: #1565C0; }
+.border2 { border-color: #2e7d32; }
+.border3 { border-color: #6a1b9a; }
+.border4 { border-color: #bf360c; }
+.top1 { border-top-color: #1565C0; }
+.top2 { border-top-color: #2e7d32; }
+.top3 { border-top-color: #6a1b9a; }
+.top4 { border-top-color: #bf360c; }
+
+@media (max-width: 768px) {
+  header { padding: 40px 24px; }
+  header h1 { font-size: 1.8em; }
+  .stats-strip { flex-wrap: wrap; padding: 20px 24px; }
+  .container { padding: 30px 20px; }
+  .toc-cols { grid-template-columns: 1fr; }
+  .top-bar, .toc-bar { padding: 8px 20px; }
+  .section-title { font-size: 1.4em; }
+  header .meta span { display: block; margin-left: 0; margin-bottom: 4px; }
+}
+</style>
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<div class="top-bar">
+  <span>🇲🇦 المملكة المغربية – اللجنة الخاصة بالنموذج التنموي</span>
+  <span>أبريل 2021 | الملحق رقم 2</span>
+</div>
+
+<!-- الرأس -->
+<header>
+  <div class="header-inner">
+    <div class="badge">📋 وثيقة رسمية – أفق 2035</div>
+    <h1>مجموع المذكرات الموضوعاتية<br>والرهانات والمشاريع المقترحة</h1>
+    <p class="sub">في إطار النموذج التنموي الجديد للمملكة المغربية</p>
+    <div class="meta">
+      <span>📅 أبريل 2021</span>
+      <span>🗂️ الملحق رقم 2</span>
+      <span>📑 25 مذكرة موضوعاتية</span>
+      <span>🎯 4 محاور استراتيجية</span>
+    </div>
+  </div>
+</header>
+
+<!-- الإحصائيات -->
+<div class="stats-strip">
+  <div class="stat"><span class="num">25</span><span class="lbl">مذكرة موضوعاتية</span></div>
+  <div class="stat"><span class="num">4</span><span class="lbl">محاور استراتيجية</span></div>
+  <div class="stat"><span class="num">12</span><span class="lbl">مشروعًا ورهانًا</span></div>
+  <div class="stat"><span class="num">2035</span><span class="lbl">أفق التنفيذ</span></div>
+  <div class="stat"><span class="num">2</span><span class="lbl">قسم رئيسي</span></div>
+</div>
+
+<!-- شريط التنقل -->
+<nav class="toc-bar">
+  <a href="#intro">التقديم</a>
+  <a href="#ax1">المحور 1 – الاقتصاد</a>
+  <a href="#ax2">المحور 2 – الرأسمال البشري</a>
+  <a href="#ax3">المحور 3 – الإدماج</a>
+  <a href="#ax4">المحور 4 – المجالات الترابية</a>
+  <a href="#ax5">المحاور العرضانية</a>
+  <a href="#projects">المشاريع والرهانات</a>
+</nav>
+
+<div class="container">
+
+  <!-- فهرس المحتويات -->
+  <div class="toc-card" id="intro">
+    <h3>📑 فهرس الوثيقة</h3>
+    <div class="toc-cols">
+      <a href="#ax1">ريادة الأعمال والتحول الإنتاجي</a>
+      <a href="#ax1">رهان «صنع في المغرب»: التنويع والجودة</a>
+      <a href="#ax1">التنافسية والجاذبية</a>
+      <a href="#ax1">مشروع: التنافسية اللوجستيكية</a>
+      <a href="#ax1">رهان أسواق الرساميل</a>
+      <a href="#ax1">قابلية التشغيل والكفاءات</a>
+      <a href="#ax1">الاقتصاد الاجتماعي</a>
+      <a href="#ax2">تربية وتكوين بجودة متميزة</a>
+      <a href="#ax2">مشروع: «نهضة تربوية مغربية»</a>
+      <a href="#ax2">التعليم العالي والتكوين المهني والبحث العلمي</a>
+      <a href="#ax2">رهان المعرفة</a>
+      <a href="#ax2">الصحة والرفاه – مشروع: تغطية صحية شاملة</a>
+      <a href="#ax3">المساواة بين النساء والرجال</a>
+      <a href="#ax3">شباب مزدهر – مشروع: «كاب-شباب»</a>
+      <a href="#ax3">الثقافة – منصة المحتويات الثقافية</a>
+      <a href="#ax3">الحماية الاجتماعية – مغرب الإدماج</a>
+      <a href="#ax4">الجهوية المتقدمة والتمدن</a>
+      <a href="#ax4">الموارد الطبيعية والمناخ</a>
+      <a href="#ax4">الطاقة ومنظومة القنب الهندي</a>
+      <a href="#ax5">دور الدولة والحريات والحكامة</a>
+      <a href="#ax5">الرقمنة كرافعة للتحول</a>
+      <a href="#ax5">الإطار الماكرو-اقتصادي</a>
+      <a href="#ax5">جبايات فعالة وعادلة</a>
+      <a href="#ax5">مغاربة العالم – الشراكات الدولية</a>
+    </div>
+  </div>
+
+  <!-- التقديم -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📖</div>
+      <div>
+        <div class="section-title">تقديم الوثيقة</div>
+        <div class="section-subtitle">اللجنة الخاصة بالنموذج التنموي</div>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <h4>ما هذه الوثيقة؟</h4>
+      تمثل هذه الوثيقة تجميعاً للمذكرات الموضوعاتية الملخصة التي أعدتها اللجنة الخاصة بالنموذج التنموي. وتقدم هذه المذكرات تحليل اللجنة لبعض المواضيع التي تم تحديدها كمواضيع مهيكلة في إطار النموذج التنموي الجديد. وتشكل هذه المذكرات تكملة وإغناء لمضامين التقرير العام للجنة، وتهدف إلى تعميق وتفصيل التفكير حول هذه المواضيع.
+    </div>
+
+    <div class="data-grid">
+      <div class="data-box top1">
+        <div class="big c1">4</div>
+        <div class="small">مكونات رئيسية<br>تُهيكل المذكرات</div>
+      </div>
+      <div class="data-box top2">
+        <div class="big c2">4</div>
+        <div class="small">جوانب متكاملة<br>داخل كل مذكرة</div>
+      </div>
+      <div class="data-box top3">
+        <div class="big c3">25</div>
+        <div class="small">مذكرة موضوعاتية<br>شاملة</div>
+      </div>
+      <div class="data-box top4">
+        <div class="big c4">2035</div>
+        <div class="small">أفق التنفيذ<br>والأهداف</div>
+      </div>
+    </div>
+
+    <div class="strategy-block" style="border-color: var(--secondary);">
+      <h4>🏗️ الهيكل الأساسي لكل مذكرة موضوعاتية:</h4>
+      تُبنى كل مذكرة على أربعة جوانب متكاملة: <strong>(1) توصيف الوضعية الراهنة</strong> – تحديد سمات الوضع الحالي ورصد تطوراته الأخيرة، <strong>(2) العناصر التشخيصية</strong> – رصد العوائق الرئيسية والنقائص المسجلة، <strong>(3) صياغة الطموح</strong> – طموح النموذج التنموي الجديد في الموضوع المتناول، <strong>(4) التوجهات الاستراتيجية</strong> – إطار للمبادرة لجميع الأطراف المعنية من أجل العمل الجماعي.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- المحور الأول -->
+  <div class="section" id="ax1">
+    <div class="section-header">
+      <div class="section-icon bg1">🏢</div>
+      <div>
+        <div class="section-title c1">المحور الأول: الاقتصاد الدينامي والمتنوع</div>
+        <div class="section-subtitle">اقتصاد يخلق قيمة مضافة ومناصب شغل ذات جودة</div>
+      </div>
+    </div>
+
+    <!-- ريادة الأعمال -->
+    <div class="axis-card">
+      <div class="axis-card-header" style="background:#eef4fb;">
+        <div class="axis-num bg1">1</div>
+        <div>
+          <h3 class="c1">ريادة الأعمال والتحول الإنتاجي</h3>
+          <div style="font-size:0.9em;color:var(--text-light);">تحليل النسيج الإنتاجي المغربي وسبل الإصلاح</div>
+        </div>
+      </div>
+      <div class="axis-card-body">
+
+        <p class="axis-desc">تتناول هذه المذكرة إشكالية النمو الاقتصادي بالمغرب من زاوية أسسه الميكرو-اقتصادية، على مستوى المقاولة والنسيج الإنتاجي. يعدّ التحول الهيكلي للاقتصاد شرطاً أساسياً لتسريع النمو بشكل مستدام.</p>
+
+        <h4 style="font-size:1.1em;color:var(--primary);margin-bottom:14px;">📊 الوضعية الراهنة – أرقام وحقائق</h4>
+        <div class="data-grid">
+          <div class="data-box top1">
+            <div class="big c1">50.000</div>
+            <div class="small">مقاولة تحقق رقم<br>معاملات يفوق مليون درهم</div>
+          </div>
+          <div class="data-box top1">
+            <div class="big c1">64%</div>
+            <div class="small">نسبة المقاولات التي<br>تشغل أقل من 10 موظفين</div>
+          </div>
+          <div class="data-box top1">
+            <div class="big c1">40%</div>
+            <div class="small">فقط نسبة التصريح<br>بالمستخدمين في القطاع غير المهيكل</div>
+          </div>
+          <div class="data-box top1">
+            <div class="big c1">8%</div>
+            <div class="small">نسبة الأطر المتوسطة والعليا<br>بين الأجراء (مقابل 20% في الدول الصاعدة)</div>
+          </div>
+          <div class="data-box top1">
+            <div class="big c1">6.000</div>
+            <div class="small">مقاولة مصدِّرة فقط<br>(مقابل 60.000 في تركيا)</div>
+          </div>
+          <div class="data-box top1">
+            <div class="big c1">1.350</div>
+            <div class="small">صنفاً تصدِّره المغرب<br>(مقابل +3.000 في ماليزيا وتايلاند)</div>
+          </div>
+          <div class="data-box top1">
+            <div class="big c1">50</div>
+            <div class="small">براءة اختراع مسجلة<br>(مقابل +5.000 في تركيا)</div>
+          </div>
+          <div class="data-box top1">
+            <div class="big c1">99/121</div>
+            <div class="small">ترتيب المغرب في مؤشر<br>التعقيد الاقتصادي (هارفارد)</div>
+          </div>
+        </div>
+
+        <div class="feature-grid" style="margin-top:24px;">
+          <div class="feature-item border1">
+            <strong>%10 فقط من المقاولات</strong>
+            تنشط في الصناعة
+          </div>
+          <div class="feature-item border1">
+            <strong>%21 في البناء</strong>
+            و%28 في التجارة، و%41 في الخدمات
+          </div>
+          <div class="feature-item border1">
+            <strong>7 مليون دولار فقط</strong>
+            تمويلات الشركات الناشئة (مقابل 700 مليون في نيجيريا)
+          </div>
+          <div class="feature-item border1">
+            <strong>%6 فقط من المقاولات</strong>
+            تزاول أنشطة البحث والتطوير
+          </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top:24px;">
+          <h4>🔍 التشخيص الرئيسي</h4>
+          يرجع بطء التحول الهيكلي أساساً إلى ضعف ديناميكية ريادة الأعمال في القطاعات الإنتاجية والمبتكرة. تبقى المقاولات المغربية قليلة الرسملة، ضعيفة التجديد، وتفضّل الأنشطة التقليدية ذات الطابع الريعي على حساب الأنشطة الإنتاجية المبتكرة والتصديرية.
+        </div>
+
+        <h4 style="font-size:1.1em;color:var(--accent);margin:20px 0 12px;">🎯 أهداف أفق 2035</h4>
+        <table>
+          <thead><tr><th>المؤشر</th><th>الوضع الحالي</th><th>الهدف 2035</th></tr></thead>
+          <tbody>
+            <tr><td>القيمة المضافة الصناعية ذات التكنولوجيا المتوسطة أو العالية</td><td class="from">28%</td><td class="to arrow">60% ←</td></tr>
+            <tr><td>الترتيب في مؤشر التعقيد الاقتصادي</td><td class="from">المرتبة 99/121</td><td class="to arrow">أفضل 50 دولة ←</td></tr>
+            <tr><td>عدد المقاولات المصدِّرة</td><td class="from">6.000</td><td class="to arrow">12.000 ←</td></tr>
+            <tr><td>عدد المقاولات الناشئة «الغزالن»</td><td class="from">1.000</td><td class="to arrow">3.000 ←</td></tr>
+            <tr><td>براءات الاختراع السنوية للمقاولات</td><td class="from">أقل من 300</td><td class="to arrow">1.000 في السنة ←</td></tr>
+          </tbody>
+        </table>
+
+        <h4 style="font-size:1.1em;color:var(--primary);margin:20px 0 12px;">🛣️ التوجهات الاستراتيجية الرئيسية</h4>
+        <div class="strategy-block border1">
+          <h4>1. سياسة وطنية للتحول الاقتصادي</h4>
+          بلورة سياسة وطنية للتحول الاقتصادي يقودها رئيس الحكومة وتضطلع بها جميع الجهات الفاعلة، بشكل يجمع الفاعلين حول طموح مشترك وأهداف وطنية منتجة للثروة.
+        </div>
+        <div class="strategy-block border1">
+          <h4>2. جعل ريادة الأعمال أكثر جاذبية</h4>
+          من خلال آليات التقليل من المخاطر وتحفيزات عمومية محددة وفعالة، توجيه المبادرة الخاصة نحو الأنشطة الحاملة للتحول الإنتاجي.
+        </div>
+        <div class="strategy-block border1">
+          <h4>3. استراتيجية وطنية لمواكبة المقاولات</h4>
+          دعم المقاولات من حيث القدرات التدبيرية والولوج إلى التمويل والابتكار، في إطار منظومات جهوية للمواكبة عبر شباك وحيد.
+        </div>
+        <div class="strategy-block border1">
+          <h4>4. تشجيع المقاولات الكبرى لتصبح محركات للتنويع</h4>
+          وضع سياسة شراكة إرادية بين القطاعين العام والخاص لتشجيع الفاعلين الأساسيين على تعبئة قدراتهم من أجل المساهمة في التحول الإنتاجي.
+        </div>
+        <div class="strategy-block border1">
+          <h4>5. استعمال الطلبيات العمومية رافعةً للتنمية الإنتاجية</h4>
+          تعزيز الأفضلية الوطنية في الصفقات العمومية، واللجوء إلى التعويضات الصناعية للمشاريع الكبرى، مع ضمان %30 للمقاولات الصغيرة والمتوسطة.
+        </div>
+
+        <!-- خزانات الازدهار -->
+        <h4 style="font-size:1.1em;color:var(--primary);margin:24px 0 12px;">💎 خزانات ازدهار الاقتصاد المغربي الأربعة</h4>
+        <div class="feature-grid">
+          <div class="feature-item border1">
+            <strong>I – الرأسمال الطبيعي</strong>
+            الفوسفاط (أهم احتياطيات عالمية) + الطاقات المتجددة + الثروة السمكية (3.500 كم سواحل) + الفلاحة البيولوجية
+          </div>
+          <div class="feature-item border1">
+            <strong>II – الرأسمال اللامادي</strong>
+            السياحة (7 مليون سائح حالياً مقابل 15 مليون بجزر الكناري) + السينما + الحرف التقليدية + الخدمات الرقمية
+          </div>
+          <div class="feature-item border1">
+            <strong>III – التموقع الجيو-استراتيجي</strong>
+            حلقة وصل بين أوروبا وأفريقيا + ميناء طنجة المتوسط + صناعة السيارات والطيران + الطب البيولوجي
+          </div>
+          <div class="feature-item border1">
+            <strong>IV – السوق الداخلية</strong>
+            الطلب العمومي 15% من الناتج الداخلي الخام + قطاع البناء + التجارة (70% واردات تحتاج بديلاً وطنياً)
+          </div>
+        </div>
+      </div>
+    </div><!-- end axis-card -->
+
+    <!-- مشروع: صنع في المغرب -->
+    <div class="project-card" id="projects">
+      <div class="project-card-body">
+        <span class="project-tag tag-bet">⚡ رهان استراتيجي</span>
+        <h4>رهان «صنع في المغرب»: التنويع والارتقاء بالجودة</h4>
+        <p>هدفه الرفع من إشعاع عالمة «صنع في المغرب» عبر 4 مكونات أساسية:</p>
+        <div class="feature-grid" style="margin-top:16px;">
+          <div class="feature-item" style="border-color:#1565C0;">
+            <strong>المكون الأول</strong>
+            إحداث فرق عمل خاصة لتحرير الإمكانات القطاعية
+          </div>
+          <div class="feature-item" style="border-color:#1565C0;">
+            <strong>المكون الثاني</strong>
+            إحداث أداة تمويل استباقية للتنويع (صندوق محمد السادس)
+          </div>
+          <div class="feature-item" style="border-color:#1565C0;">
+            <strong>المكون الثالث</strong>
+            وضع استراتيجية وطنية لمواكبة المقاولات
+          </div>
+          <div class="feature-item" style="border-color:#1565C0;">
+            <strong>المكون الرابع</strong>
+            وضع نظام وطني للابتكار
+          </div>
+        </div>
+        <div style="margin-top:18px;padding:14px 18px;background:#eef4fb;border-radius:8px;font-size:0.97em;color:var(--text-mid);">
+          <strong>الأفق الزمني:</strong> 2021-2022: انطلاق فرق العمل في 3-4 قطاعات | 2023-2025: توسيع النطاق على جميع القطاعات
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end section ax1 -->
+
+  <div class="divider"></div>
+
+  <!-- المحور الثاني -->
+  <div class="section" id="ax2">
+    <div class="section-header">
+      <div class="section-icon bg2">🎓</div>
+      <div>
+        <div class="section-title c2">المحور الثاني: الرأسمال البشري</div>
+        <div class="section-subtitle">رأسمال بشري معزز وأكثر استعداداً للمستقبل</div>
+      </div>
+    </div>
+
+    <div class="axis-card">
+      <div class="axis-card-header" style="background:#edf7f0;">
+        <div class="axis-num bg2">2</div>
+        <div>
+          <h3 class="c2">التربية والتكوين والصحة والرفاه</h3>
+          <div style="font-size:0.9em;color:var(--text-light);">الاستثمار في الإنسان لبناء مستقبل المغرب</div>
+        </div>
+      </div>
+      <div class="axis-card-body">
+        <div class="green-box">
+          <h4>🎯 الرؤية</h4>
+          يشكل الرأسمال البشري ركيزة أساسية في النموذج التنموي الجديد، إذ لا يمكن تحقيق تحول اقتصادي حقيقي دون الاستثمار في جودة التعليم والتكوين وتحسين الولوج إلى الخدمات الصحية وتعزيز رفاهية المواطنين.
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-item border2">
+            <strong>📚 تربية وتكوين بجودة متميزة</strong>
+            الإصلاح الشامل لمنظومة التعليم من خلال تحسين مستوى الأداء وجودة التعلمات
+          </div>
+          <div class="feature-item border2">
+            <strong>🏛️ التعليم العالي والتكوين المهني</strong>
+            ربط الجامعات بسوق الشغل وتطوير البحث العلمي والابتكار
+          </div>
+          <div class="feature-item border2">
+            <strong>💡 رهان المعرفة</strong>
+            بناء مجتمع المعرفة وتوسيع إمكانات الولوج إلى المعلومة والرقمنة
+          </div>
+          <div class="feature-item border2">
+            <strong>🏥 الصحة والرفاه</strong>
+            تعميم الحماية الصحية وتحسين جودة الخدمات الصحية لجميع المواطنين
+          </div>
+        </div>
+
+        <h4 style="font-size:1.1em;color:var(--accent);margin:24px 0 12px;">📋 مشاريع رئيسية</h4>
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«نهضة تربوية مغربية»</h4>
+            <p>إصلاح جذري لمنظومة التعليم يرتكز على جودة التعلمات وتكوين المدرسين وتحديث البنيات التحتية المدرسية، بهدف ضمان تعليم ذي جودة عالية لجميع الأطفال المغاربة.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>تغطية صحية شاملة</h4>
+            <p>تعميم الحماية الاجتماعية والصحية على جميع المواطنين، وتحسين جودة الخدمات الصحية في المناطق النائية، وتعزيز البنية التحتية الصحية الوطنية.</p>
+            <div style="margin-top:14px;padding:12px 16px;background:#edf7f0;border-radius:8px;font-size:0.95em;color:var(--text-mid);">
+              <strong>ملاحظة:</strong> اليد العاملة المشتغلة في قطاع الصحة بالمغرب: <strong>1% فقط</strong> من مجموع مناصب الشغل (مقابل <strong>10%</strong> في الدول الأوروبية)
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- المحور الثالث -->
+  <div class="section" id="ax3">
+    <div class="section-header">
+      <div class="section-icon bg3">🤝</div>
+      <div>
+        <div class="section-title c3">المحور الثالث: الإدماج الاجتماعي</div>
+        <div class="section-subtitle">فرص لإدماج الجميع وتوطيد الرابط الاجتماعي</div>
+      </div>
+    </div>
+
+    <div class="axis-card">
+      <div class="axis-card-header" style="background:#f5edf8;">
+        <div class="axis-num bg3">3</div>
+        <div>
+          <h3 class="c3">المساواة والشباب والثقافة والحماية الاجتماعية</h3>
+          <div style="font-size:0.9em;color:var(--text-light);">مجتمع منسجم يضمن فرص متكافئة للجميع</div>
+        </div>
+      </div>
+      <div class="axis-card-body">
+        <div class="feature-grid">
+          <div class="feature-item border3">
+            <strong>⚖️ المساواة بين النساء والرجال</strong>
+            تعزيز الاستقلالية الاقتصادية للمرأة والرفع من مشاركتها في سوق الشغل
+          </div>
+          <div class="feature-item border3">
+            <strong>🌟 شباب مزدهر</strong>
+            تحسين أوضاع الشباب وتعزيز فرص الإدماج الاقتصادي والاجتماعي
+          </div>
+          <div class="feature-item border3">
+            <strong>🎭 الثقافة والهوية</strong>
+            تثمين الموروث الثقافي المغربي ودعم الإبداع والصناعات الثقافية
+          </div>
+          <div class="feature-item border3">
+            <strong>🛡️ الحماية الاجتماعية</strong>
+            تعميم التغطية الاجتماعية وتحقيق العدالة الاجتماعية
+          </div>
+        </div>
+
+        <h4 style="font-size:1.1em;color:var(--primary);margin:24px 0 12px;">📁 المشاريع الرئيسية للمحور الثالث</h4>
+
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-bet">⚡ رهان</span>
+            <h4>«الاستقلالية الاقتصادية للنساء»</h4>
+            <p>رفع نسبة مشاركة المرأة في سوق الشغل وتيسير ولوجها إلى التمويل وحق التملك وريادة الأعمال.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«كاب-شباب»</h4>
+            <p>برنامج متكامل لمرافقة الشباب وتأهيلهم وإدماجهم في الحياة الاقتصادية والاجتماعية.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«منصة جامعة للمحتويات الثقافية والإعلامية»</h4>
+            <p>إنشاء منصة رقمية وطنية للمحتوى الثقافي المغربي لتعزيز الحضور الرقمي وتوزيع الإنتاج الثقافي.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«مغرب الإدماج»</h4>
+            <p>تعزيز آليات الحماية الاجتماعية وإدماج الفئات الهشة في المنظومة الاجتماعية والاقتصادية.</p>
+          </div>
+        </div>
+
+        <div style="padding:16px 20px;background:#f5edf8;border-radius:8px;font-size:0.97em;color:var(--text-mid);margin-top:8px;">
+          <strong>معطى محوري:</strong> الاقتصاد الاجتماعي والتضامني يمثل <strong>0.5%</strong> فقط من التشغيل بالمغرب (مقابل <strong>8%</strong> في فرنسا) – خزان إمكانات ضخم غير مستغَل.
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- المحور الرابع -->
+  <div class="section" id="ax4">
+    <div class="section-header">
+      <div class="section-icon bg4">🌍</div>
+      <div>
+        <div class="section-title c4">المحور الرابع: المجالات الترابية</div>
+        <div class="section-subtitle">مجالات ترابية مكينة: فضاءات لترسيخ التنمية</div>
+      </div>
+    </div>
+
+    <div class="axis-card">
+      <div class="axis-card-header" style="background:#fdf0ed;">
+        <div class="axis-num bg4">4</div>
+        <div>
+          <h3 class="c4">الجهوية والتمدن والموارد الطبيعية والطاقة</h3>
+          <div style="font-size:0.9em;color:var(--text-light);">التنمية المجالية المتوازنة والمستدامة</div>
+        </div>
+      </div>
+      <div class="axis-card-body">
+
+        <div class="feature-grid">
+          <div class="feature-item border4">
+            <strong>🏛️ الجهوية المتقدمة</strong>
+            تفعيل حقيقي للجهوية كنموذج للحكامة الترابية المتقدمة وتقليص الفوارق المجالية
+          </div>
+          <div class="feature-item border4">
+            <strong>🏙️ التمدن</strong>
+            تدبير عقلاني للتوسع العمراني وتطوير خدمات التنقل داخل المدن
+          </div>
+          <div class="feature-item border4">
+            <strong>🌾 المجالات القروية</strong>
+            تنمية المجالات القروية كفضاءات منتجة للثروة وتقريب الخدمات العمومية من المواطنين
+          </div>
+          <div class="feature-item border4">
+            <strong>💧 الماء والمناخ</strong>
+            مواجهة الإجهاد المائي وتدبير مستدام للموارد الطبيعية في ظل التغيرات المناخية
+          </div>
+          <div class="feature-item border4">
+            <strong>⚡ الطاقة</strong>
+            تسريع الانتقال الطاقي نحو طاقة تنافسية ومنخفضة الكربون
+          </div>
+          <div class="feature-item border4">
+            <strong>🌿 القنب الهندي</strong>
+            تقنين وتنظيم منظومة القنب الهندي والاستفادة من الاستخدامات المشروعة
+          </div>
+        </div>
+
+        <div class="highlight-box" style="margin-top:24px;">
+          <h4>⚡ رهان الطاقة التنافسية ومنخفضة الكربون</h4>
+          يتوفر المغرب على مزيج استثنائي من مصادر الطاقة الشمسية والريحية، بإمكانات طاقية تعادل إنتاج دول كنيجيريا وفنزويلا للمحروقات. هذه الميزة المقارنة تجعل المغرب شريكاً لا محيد عنه لأوروبا، خاصة في إطار «الميثاق الأخضر الجديد»، مما سيفتح آفاقاً واسعة في تحلية مياه البحر والكيمياء الخضراء والهيدروجين الأخضر.
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«التنقل داخل المدن والحواضر الكبرى»</h4>
+            <p>تطوير منظومة متكاملة لخدمات التنقل الحضري تضمن الولوج العادل والمستدام لجميع سكان المدن.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«خدمات عمومية قروية حول المدن الصغيرة (الدوائر)»</h4>
+            <p>تقريب الخدمات العمومية من المواطنين في الوسط القروي وتحسين جودتها ومواصلتها.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-bet">⚡ رهان</span>
+            <h4>«الماء» – مواجهة الإجهاد المائي</h4>
+            <p>برنامج متكامل لتدبير الموارد المائية يشمل تحلية مياه البحر والتوعية بترشيد الاستهلاك واسترجاع المياه المعالجة في الفلاحة.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- القسم الثاني: المحاور العرضانية -->
+  <div class="section" id="ax5">
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--secondary);">⚙️</div>
+      <div>
+        <div class="section-title" style="color:var(--secondary);">القسم الثاني: المحاور العرضانية</div>
+        <div class="section-subtitle">الركائز الأفقية التي تدعم جميع المحاور الاستراتيجية</div>
+      </div>
+    </div>
+
+    <div class="axis-card">
+      <div class="axis-card-header" style="background:#fdf8e8;">
+        <div class="axis-num" style="background:var(--secondary);">⚙</div>
+        <div>
+          <h3 style="color:#856404;">مرجعية التنمية والحكامة ورافعات التغيير</h3>
+        </div>
+      </div>
+      <div class="axis-card-body">
+
+        <div class="feature-grid">
+          <div class="feature-item" style="border-color:var(--secondary);">
+            <strong>🏛️ دور الدولة</strong>
+            دولة منظِّمة وضامنة للمصلحة العامة، تحدد الأولويات وتهيئ البيئة المواتية
+          </div>
+          <div class="feature-item" style="border-color:var(--secondary);">
+            <strong>⚖️ الحريات والعدالة</strong>
+            تعزيز دولة الحق والقانون وضمان الحريات الأساسية وإصلاح منظومة العدالة
+          </div>
+          <div class="feature-item" style="border-color:var(--secondary);">
+            <strong>🔎 الحكامة الجيدة</strong>
+            ترسيخ الشفافية والمساءلة ومحاربة الفساد وتحديث مناهج التدبير العمومي
+          </div>
+          <div class="feature-item" style="border-color:var(--secondary);">
+            <strong>💻 الرقميات</strong>
+            رافعة أساسية للتحول: خدمات عمومية رقمية + اقتصاد رقمي + مقاولات ناشئة
+          </div>
+          <div class="feature-item" style="border-color:var(--secondary);">
+            <strong>🌐 مغاربة العالم</strong>
+            فاعلون في التنمية: تحويلات مالية + استثمار + نقل المعرفة والخبرة
+          </div>
+          <div class="feature-item" style="border-color:var(--secondary);">
+            <strong>🤝 الشراكات الدولية</strong>
+            تعزيز مكانة المغرب دولياً وبناء شراكات استراتيجية لدعم مسار التنمية
+          </div>
+        </div>
+
+        <h4 style="font-size:1.1em;color:var(--primary);margin:24px 0 12px;">💰 التمويلات والإطار الماكرو-اقتصادي</h4>
+        <div class="feature-grid">
+          <div class="feature-item" style="border-color:var(--accent);">
+            <strong>الإطار الماكرو-اقتصادي</strong>
+            ضمان استقرار الماكرو-اقتصادي كشرط لجذب الاستثمارات وتحقيق نمو مستدام
+          </div>
+          <div class="feature-item" style="border-color:var(--accent);">
+            <strong>جبايات فعالة وعادلة</strong>
+            إصلاح المنظومة الجبائية لتكون أكثر عدالة وفعالية وتنافسية وشفافية
+          </div>
+          <div class="feature-item" style="border-color:var(--accent);">
+            <strong>مغاربة العالم</strong>
+            تحسين استقطاب استثمارات المهجر وتيسير مشاركتهم الفعلية في التنمية
+          </div>
+          <div class="feature-item" style="border-color:var(--accent);">
+            <strong>الشراكات الدولية</strong>
+            تنويع الشراكات الاستراتيجية مع أفريقيا والخليج وأوروبا وأمريكا الشمالية
+          </div>
+        </div>
+
+        <div class="project-card" style="margin-top:20px;">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«الابتكار الإحصائي والبيانات المفتوحة»</h4>
+            <p>تحديث المنظومة الإحصائية الوطنية وفتح البيانات العمومية أمام المواطنين والباحثين والمقاولات، لدعم صناعة القرار وتشجيع الابتكار القائم على البيانات.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-body">
+            <span class="project-tag tag-project">✅ مشروع</span>
+            <h4>«إدارة ناجعة ومواطنة»</h4>
+            <p>تحديث الإدارة العمومية وجعلها في خدمة المواطن، من خلال الرقمنة الشاملة للخدمات وتبسيط الإجراءات وتحسين جودة الاستقبال.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- خلاصة ختامية -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon" style="background:#333;">🏁</div>
+      <div>
+        <div class="section-title" style="color:#333;">خلاصة: أفق 2035</div>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <h4>🎯 طموح النموذج التنموي الجديد</h4>
+      يسعى النموذج التنموي الجديد، في أفق 2035، إلى بناء مغرب مزدهر ومنصف ومتضامن، من خلال تسريع النمو الاقتصادي بمعدل يصل إلى %6 وخلق مناصب شغل ذات جودة والحد من الفوارق الاجتماعية والمجالية. ويرتكز هذا النموذج على تحالف جديد بين الدولة والمواطنين والقطاع الخاص، في إطار قيم الثقة والمسؤولية والمشاركة.
+    </div>
+
+    <table>
+      <thead><tr><th>الرهان</th><th>الوضع الحالي</th><th>الهدف 2035</th></tr></thead>
+      <tbody>
+        <tr><td>معدل النمو الاقتصادي</td><td>3-4%</td><td class="to arrow">5-6% ←</td></tr>
+        <tr><td>نسبة الفقر</td><td>مرتفعة نسبياً</td><td class="to arrow">خفض جوهري ←</td></tr>
+        <tr><td>مناصب الشغل الجديدة</td><td>غير كافية</td><td class="to arrow">+500.000/سنة ←</td></tr>
+        <tr><td>الصادرات كنسبة من الناتج الداخلي الخام</td><td>37%</td><td class="to arrow">50%+ ←</td></tr>
+        <tr><td>نسبة الطاقات المتجددة</td><td>37%</td><td class="to arrow">80% ←</td></tr>
+        <tr><td>نسبة التحضر</td><td>60%</td><td class="to arrow">تحضر مستدام ←</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- end container -->
+
+<!-- التذييل -->
+<footer>
+  <strong>مجموع المذكرات الموضوعاتية والرهانات والمشاريع المقترحة</strong><br>
+  في إطار النموذج التنموي الجديد للمملكة المغربية<br>
+  الملحق رقم 2 | أبريل 2021<br>
+  <br>
+  <small>وثيقة محوَّلة إلى صيغة HTML – جميع الحقوق محفوظة للجنة الخاصة بالنموذج التنموي</small>
+</footer>
+
+</body>
+</html>
